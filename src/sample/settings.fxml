@@ -10,15 +10,14 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<TabPane fx:id="tabpane" nodeOrientation="LEFT_TO_RIGHT" prefHeight="400.0" prefWidth="600.0" side="LEFT" stylesheets="@settings.css" tabClosingPolicy="UNAVAILABLE" tabMaxWidth="0.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<TabPane fx:id="tabpane" nodeOrientation="LEFT_TO_RIGHT" prefHeight="768.0" prefWidth="1024.0" side="LEFT" stylesheets="@settings.css" tabClosingPolicy="UNAVAILABLE" tabMaxWidth="0.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <tabs>
       <Tab text="Recommandations">
          <content>
-            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="360.0" prefWidth="421.0" />
          </content>
       </Tab>
       <Tab text="Mes Restos">
@@ -35,62 +34,65 @@
          <content>
             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="143.0" prefWidth="195.0">
                <children>
-                  <VBox prefHeight="400.0" prefWidth="411.0" spacing="20.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                  <VBox prefHeight="400.0" prefWidth="411.0" spacing="20.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="30.0">
                      <children>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Settings">
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Settings" wrappingWidth="249.12890625">
                            <font>
-                              <Font size="22.0" />
+                              <Font size="40.0" />
                            </font>
                         </Text>
-                        <HBox prefHeight="100.0" prefWidth="200.0">
+                        <HBox prefHeight="30.0" prefWidth="854.0">
                            <children>
-                              <VBox prefHeight="280.0" prefWidth="243.0" spacing="30.0">
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="No" wrappingWidth="200.0">
+                                 <font>
+                                    <Font size="22.0" />
+                                 </font>
+                              </Text>
+                              <TextField prefHeight="30.0" prefWidth="200.0" />
+                           </children>
+                           <VBox.margin>
+                              <Insets top="40.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox prefHeight="30.0" prefWidth="854.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Email" wrappingWidth="200.0">
+                                 <font>
+                                    <Font size="22.0" />
+                                 </font>
+                              </Text>
+                              <TextField prefHeight="30.0" prefWidth="200.0" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="30.0" prefWidth="854.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Password" wrappingWidth="200.0">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Text>
+                              <PasswordField prefHeight="49.0" prefWidth="201.0" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="244.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Catégories" wrappingWidth="200.0">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Text>
+                              <VBox prefHeight="85.0" prefWidth="158.0">
                                  <children>
-                                    <HBox prefHeight="100.0" prefWidth="200.0">
-                                       <children>
-                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nom" wrappingWidth="70.0" />
-                                          <TextField prefHeight="25.0" prefWidth="170.0" />
-                                       </children>
-                                    </HBox>
-                                    <HBox prefHeight="100.0" prefWidth="200.0">
-                                       <children>
-                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Email" wrappingWidth="70.0" />
-                                          <TextField prefHeight="25.0" prefWidth="170.0" />
-                                       </children>
-                                    </HBox>
-                                    <HBox prefHeight="100.0" prefWidth="200.0">
-                                       <children>
-                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Password" wrappingWidth="70.0" />
-                                          <PasswordField prefHeight="25.0" prefWidth="170.0" />
-                                       </children>
-                                    </HBox>
-                                    <HBox prefHeight="100.0" prefWidth="244.0">
-                                       <children>
-                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Catégories" wrappingWidth="90.0" />
-                                          <VBox prefHeight="85.0" prefWidth="158.0">
-                                             <children>
-                                                <CheckBox mnemonicParsing="false" prefWidth="80.0" text="Sportif" />
-                                                <CheckBox mnemonicParsing="false" text="Healthy" />
-                                                <CheckBox mnemonicParsing="false" text="Heavy Calories" />
-                                                <CheckBox mnemonicParsing="false" text="Végétarien" />
-                                                <CheckBox mnemonicParsing="false" text="Sans Gluten" />
-                                             </children>
-                                          </VBox>
-                                       </children>
-                                    </HBox>
-                                 </children>
-                                 <padding>
-                                    <Insets top="30.0" />
-                                 </padding>
-                              </VBox>
-                              <VBox alignment="CENTER" prefHeight="318.0" prefWidth="271.0" spacing="20.0">
-                                 <children>
-                                    <Circle fill="#8abff2" radius="55.0" stroke="BLACK" strokeType="INSIDE" />
-                                    <Button mnemonicParsing="false" text="Sauvegarder" />
+                                    <CheckBox mnemonicParsing="false" prefWidth="80.0" text="Sportif" />
+                                    <CheckBox mnemonicParsing="false" text="Healthy" />
+                                    <CheckBox mnemonicParsing="false" text="Heavy Calories" />
+                                    <CheckBox mnemonicParsing="false" text="Végétarien" />
+                                    <CheckBox mnemonicParsing="false" text="Sans Gluten" />
                                  </children>
                               </VBox>
                            </children>
                         </HBox>
+                        <Button mnemonicParsing="false" text="Sauvegarder" />
                      </children>
                   </VBox>
                </children>

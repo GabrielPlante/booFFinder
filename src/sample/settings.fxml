@@ -6,15 +6,16 @@
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<TabPane fx:id="tabpane" nodeOrientation="LEFT_TO_RIGHT" prefHeight="400.0" prefWidth="600.0" side="LEFT" stylesheets="@settings.css" tabClosingPolicy="UNAVAILABLE" tabMaxWidth="0.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<TabPane fx:id="tabpane" nodeOrientation="LEFT_TO_RIGHT" prefHeight="578.0" prefWidth="822.0" side="LEFT" stylesheets="@settings.css" tabClosingPolicy="UNAVAILABLE" tabMaxWidth="0.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <tabs>
       <Tab text="Accueil">
         <content>
@@ -23,96 +24,97 @@
       </Tab>
       <Tab text="Recommandations">
          <content>
-            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <VBox prefHeight="420.0" prefWidth="645.0" spacing="20.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="20.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Recommendations" wrappingWidth="329.4140625">
+                           <font>
+                              <Font size="40.0" />
+                           </font>
+                        </Text>
+                        <HBox prefHeight="100.0" prefWidth="200.0" />
+                        <TableView prefHeight="652.0" prefWidth="612.0">
+                          <columns>
+                            <TableColumn prefWidth="501.0" text="C1" />
+                            <TableColumn prefWidth="110.0" text="C2" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </VBox>
+               </children></AnchorPane>
+         </content>
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <VBox prefHeight="420.0" prefWidth="645.0" spacing="20.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="20.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Recommandations">
+                           <font>
+                              <Font size="40.0" />
+                           </font>
+                        </Text>
+                        <TableView prefHeight="500.0" prefWidth="500.0">
+                           <columns>
+                              <TableColumn prefWidth="494.0" text="C1" />
+                              <TableColumn prefWidth="117.0" text="C2" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
          </content>
       </Tab>
       <Tab text="Mes Restos">
          <content>
-            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <VBox prefHeight="420.0" prefWidth="645.0" spacing="20.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="20.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Mes restos">
+                           <font>
+                              <Font size="40.0" />
+                           </font>
+                        </Text>
+                        <TableView prefHeight="500.0" prefWidth="500.0">
+                          <columns>
+                            <TableColumn prefWidth="494.0" text="C1" />
+                            <TableColumn prefWidth="117.0" text="C2" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </VBox>
+               </children></AnchorPane>
          </content>
       </Tab>
       <Tab text="Amis">
          <content>
             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                <children>
-                  <AnchorPane layoutX="5.0" layoutY="7.0" minHeight="0.0" minWidth="0.0" prefHeight="388.0" prefWidth="438.0">
+                  <VBox prefHeight="420.0" prefWidth="645.0" spacing="20.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="20.0">
                      <children>
-                        <VBox prefHeight="400.0" prefWidth="411.0" spacing="20.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
-                           <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Friends">
-                                 <font>
-                                    <Font size="22.0" />
-                                 </font>
-                              </Text>
-                              <HBox prefHeight="100.0" prefWidth="200.0">
-                                 <children>
-                                    <VBox prefHeight="138.0" prefWidth="418.0" spacing="30.0">
-                                       <children>
-                                          <HBox prefHeight="0.0" prefWidth="370.0">
-                                             <children>
-                                                <TextField prefHeight="25.0" prefWidth="215.0" promptText="UserID" />
-                                                <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="167.0" text="Find" />
-                                             </children>
-                                          </HBox>
-                                       </children>
-                                       <padding>
-                                          <Insets top="30.0" />
-                                       </padding>
-                                    </VBox>
-                                 </children>
-                              </HBox>
-                           </children>
-                        </VBox>
-                     </children>
-                  </AnchorPane>
-               </children></AnchorPane>
-         </content>
-      </Tab>
-      <Tab text="Settings">
-         <content>
-            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="143.0" prefWidth="195.0">
-               <children>
-                  <VBox prefHeight="400.0" prefWidth="411.0" spacing="20.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
-                     <children>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Settings">
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Friends">
                            <font>
-                              <Font size="22.0" />
+                              <Font size="40.0" />
                            </font>
                         </Text>
                         <HBox prefHeight="100.0" prefWidth="200.0">
                            <children>
-                              <VBox prefHeight="280.0" prefWidth="243.0" spacing="30.0">
+                              <VBox prefHeight="100.0" prefWidth="643.0" spacing="30.0">
                                  <children>
-                                    <HBox prefHeight="100.0" prefWidth="200.0">
+                                    <HBox prefHeight="30.0" prefWidth="612.0">
                                        <children>
-                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nom" wrappingWidth="70.0" />
-                                          <TextField prefHeight="25.0" prefWidth="170.0" />
-                                       </children>
-                                    </HBox>
-                                    <HBox prefHeight="100.0" prefWidth="200.0">
-                                       <children>
-                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Email" wrappingWidth="70.0" />
-                                          <TextField prefHeight="25.0" prefWidth="170.0" />
-                                       </children>
-                                    </HBox>
-                                    <HBox prefHeight="100.0" prefWidth="200.0">
-                                       <children>
-                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Password" wrappingWidth="70.0" />
-                                          <PasswordField prefHeight="25.0" prefWidth="170.0" />
-                                       </children>
-                                    </HBox>
-                                    <HBox prefHeight="100.0" prefWidth="244.0">
-                                       <children>
-                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Catégories" wrappingWidth="90.0" />
-                                          <VBox prefHeight="85.0" prefWidth="158.0">
-                                             <children>
-                                                <CheckBox mnemonicParsing="false" prefWidth="80.0" text="Sportif" />
-                                                <CheckBox mnemonicParsing="false" text="Healthy" />
-                                                <CheckBox mnemonicParsing="false" text="Heavy Calories" />
-                                                <CheckBox mnemonicParsing="false" text="Végétarien" />
-                                                <CheckBox mnemonicParsing="false" text="Sans Gluten" />
-                                             </children>
-                                          </VBox>
+                                          <TextField prefHeight="44.0" prefWidth="664.0" promptText="UserID">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </TextField>
+                                          <Button mnemonicParsing="false" prefHeight="44.0" prefWidth="354.0" text="Find">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Button>
                                        </children>
                                     </HBox>
                                  </children>
@@ -120,10 +122,77 @@
                                     <Insets top="30.0" />
                                  </padding>
                               </VBox>
-                              <VBox alignment="CENTER" prefHeight="318.0" prefWidth="271.0" spacing="20.0">
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children></AnchorPane>
+         </content>
+      </Tab>
+      <Tab text="Settings">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="143.0" prefWidth="195.0">
+               <children>
+                  <VBox prefHeight="400.0" prefWidth="411.0" spacing="20.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="20.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Settings">
+                           <font>
+                              <Font size="35.0" />
+                           </font>
+                        </Text>
+                        <HBox prefHeight="30.0" prefWidth="652.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nom" wrappingWidth="160.0">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Text>
+                              <TextField prefHeight="30.0" prefWidth="200.0" />
+                           </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox prefHeight="30.0" prefWidth="652.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Email" wrappingWidth="160.0">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Text>
+                              <TextField prefHeight="30.0" prefWidth="200.0" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="30.0" prefWidth="652.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Password" wrappingWidth="160.0">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Text>
+                              <PasswordField prefHeight="30.0" prefWidth="200.0" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="104.0" prefWidth="652.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Catégories" wrappingWidth="160.0">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Text>
+                              <VBox prefHeight="85.0" prefWidth="158.0">
                                  <children>
-                                    <Circle fill="#8abff2" radius="55.0" stroke="BLACK" strokeType="INSIDE" />
-                                    <Button mnemonicParsing="false" text="Sauvegarder" />
+                                    <CheckBox mnemonicParsing="false" prefWidth="80.0" text="Sportif" />
+                                    <CheckBox mnemonicParsing="false" text="Healthy" />
+                                    <CheckBox mnemonicParsing="false" text="Heavy Calories" />
+                                    <CheckBox mnemonicParsing="false" text="Végétarien" />
+                                    <CheckBox mnemonicParsing="false" text="Sans Gluten" />
                                  </children>
                               </VBox>
                            </children>

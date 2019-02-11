@@ -16,6 +16,11 @@
 
 <TabPane fx:id="tabpane" nodeOrientation="LEFT_TO_RIGHT" prefHeight="400.0" prefWidth="600.0" side="LEFT" stylesheets="@settings.css" tabClosingPolicy="UNAVAILABLE" tabMaxWidth="0.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <tabs>
+      <Tab text="Accueil">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+        </content>
+      </Tab>
       <Tab text="Recommandations">
          <content>
             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />

@@ -54,11 +54,14 @@
                               <Font size="40.0" />
                            </font>
                         </Text>
-                        <TableView prefHeight="500.0" prefWidth="500.0">
-                           <columns>
-                              <TableColumn prefWidth="494.0" text="C1" />
-                              <TableColumn prefWidth="117.0" text="C2" />
-                           </columns>
+                        <TableView prefHeight="1000.0" prefWidth="1000.0">
+                          <columns>
+                            <TableColumn prefWidth="526.0" text="Nom du restaurant" />
+                            <TableColumn prefWidth="85.0" text="Note" />
+                          </columns>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
                         </TableView>
                      </children>
                   </VBox>
@@ -77,10 +80,9 @@
                               <Font size="40.0" />
                            </font>
                         </Text>
-                        <TableView prefHeight="500.0" prefWidth="500.0">
+                        <TableView prefHeight="1000.0" prefWidth="1000.0">
                           <columns>
-                            <TableColumn prefWidth="494.0" text="C1" />
-                            <TableColumn prefWidth="117.0" text="C2" />
+                            <TableColumn prefWidth="611.0" sortType="DESCENDING" text="Restaurant" />
                           </columns>
                         </TableView>
                      </children>

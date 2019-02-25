@@ -37,7 +37,6 @@ public class ControllerCostumer {
         this.modelListCustomers = customersList;
 
 
-
     }
 
 }

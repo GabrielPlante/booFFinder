@@ -17,7 +17,7 @@ import java.io.IOException;
 public class ViewCustumer {
     static final String XML_FILE = "resources/settings.fxml";
     static final String CSS = "sample/resources/settings.css";
-    static final String LABEL = "HFV";
+    static final String LABEL = "booFFinder";
     static final int WIDTH = 640;
     static final int HEIGHT = 480;
     private static final String PERSON = "resources/restaurant.fxml";

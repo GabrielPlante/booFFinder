@@ -4,7 +4,6 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import java.util.*;
 
-import java.util.Observable;
 
 public class ModelListOfMyRestaurants {
 

@@ -15,14 +15,12 @@ import java.io.IOException;
 
 
 public class ViewCustumer {
-    public static final String IMG1 = "sample/resources/fred.png";
-    public static final String IMG2 = "sample/resources/marco.gif";
-    static final String XML_FILE = "resources/listOfCustomers.fxml";
-    static final String CSS = "sample/resources/custumerView.css";
+    static final String XML_FILE = "resources/settings.fxml";
+    static final String CSS = "sample/resources/settings.css";
     static final String LABEL = "HFV";
     static final int WIDTH = 640;
     static final int HEIGHT = 480;
-    private static final String PERSON = "resources/person.fxml";
+    private static final String PERSON = "resources/restaurant.fxml";
     private static int rangeSelectedItem = -1;
     private static ModelListOfMyRestaurants model;
     private static ControllerCostumer controller;

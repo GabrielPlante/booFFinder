@@ -15,7 +15,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<TabPane fx:id="tabpane" nodeOrientation="LEFT_TO_RIGHT" prefHeight="578.0" prefWidth="822.0" side="LEFT" stylesheets="@settings.css" tabClosingPolicy="UNAVAILABLE" tabMaxWidth="0.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<TabPane fx:id="tabpane" nodeOrientation="LEFT_TO_RIGHT" prefHeight="578.0" prefWidth="822.0" side="LEFT" stylesheets="@settings.css" tabClosingPolicy="UNAVAILABLE" tabMaxWidth="0.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1">
    <tabs>
       <Tab text="Accueil">
         <content>
@@ -96,7 +96,7 @@
                <children>
                   <VBox prefHeight="420.0" prefWidth="645.0" spacing="20.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="20.0">
                      <children>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Friends">
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Amis">
                            <font>
                               <Font size="40.0" />
                            </font>
@@ -107,12 +107,12 @@
                                  <children>
                                     <HBox prefHeight="30.0" prefWidth="612.0">
                                        <children>
-                                          <TextField prefHeight="44.0" prefWidth="664.0" promptText="UserID">
+                                          <TextField prefHeight="44.0" prefWidth="664.0" promptText="Identifiants">
                                              <font>
                                                 <Font size="20.0" />
                                              </font>
                                           </TextField>
-                                          <Button mnemonicParsing="false" prefHeight="44.0" prefWidth="354.0" text="Find">
+                                          <Button mnemonicParsing="false" prefHeight="44.0" prefWidth="354.0" text="Chercher">
                                              <font>
                                                 <Font size="20.0" />
                                              </font>
@@ -131,13 +131,13 @@
                </children></AnchorPane>
          </content>
       </Tab>
-      <Tab text="Settings">
+      <Tab text="Paramètres">
          <content>
             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="143.0" prefWidth="195.0">
                <children>
                   <VBox prefHeight="400.0" prefWidth="411.0" spacing="20.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="20.0">
                      <children>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Settings">
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Paramètres">
                            <font>
                               <Font size="35.0" />
                            </font>
@@ -173,7 +173,7 @@
                         </HBox>
                         <HBox prefHeight="30.0" prefWidth="652.0">
                            <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Password" wrappingWidth="160.0">
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Mot de passe" wrappingWidth="160.0">
                                  <font>
                                     <Font size="20.0" />
                                  </font>
@@ -191,8 +191,8 @@
                               <VBox prefHeight="85.0" prefWidth="158.0">
                                  <children>
                                     <CheckBox mnemonicParsing="false" prefWidth="80.0" text="Sportif" />
-                                    <CheckBox mnemonicParsing="false" text="Healthy" />
-                                    <CheckBox mnemonicParsing="false" text="Heavy Calories" />
+                                    <CheckBox mnemonicParsing="false" text="Sain" />
+                                    <CheckBox mnemonicParsing="false" text="Gourmand" />
                                     <CheckBox mnemonicParsing="false" text="Végétarien" />
                                     <CheckBox mnemonicParsing="false" text="Sans Gluten" />
                                  </children>

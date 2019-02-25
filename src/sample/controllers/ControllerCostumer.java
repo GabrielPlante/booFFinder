@@ -13,15 +13,13 @@ import sample.models.ModelRestaurant;
 
 public class ControllerCostumer {
     private ModelListOfMyRestaurants modelListCustomers = null;
+
     private ViewCustumer view;
-    @FXML
-    private TextField nameField;
+
     @FXML
     private ListView cutomersListView;
     @FXML
     private Text choosenName;
-    @FXML
-    private Button addButton;
     @FXML
     private Button minusButton;
 
@@ -34,9 +32,6 @@ public class ControllerCostumer {
         return choosenName;
     }
 
-    public TextField getNameField() {
-        return nameField;
-    }
 
     public void init(ModelListOfMyRestaurants customersList, ViewCustumer view) {
         this.modelListCustomers = customersList;

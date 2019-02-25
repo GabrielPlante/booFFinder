@@ -44,7 +44,7 @@ public class ViewCustumer {
         adaptItems( controller.getCutomersListView() );
 
         //listner if user click in the ListView update rangeSelectedItem value
-        listenTo( controller.getCutomersListView() );
+
     }
 
 
@@ -86,7 +86,6 @@ public class ViewCustumer {
                                     adaptItems(listView);
 
                                     //remove TextField name contents
-                                    controller.getNameField().setText("");
                                 }
                             }
 
@@ -95,21 +94,5 @@ public class ViewCustumer {
                 });
     }
 
-
-
-    /**
-     * listner if user click in the ListView
-     * update rangeSelectedItem value (if a controller need it)
-     * display the new person name in the Text ChoosenName
-     * @param listView should receive a clic event
-     */
-    private void listenTo(ListView listView) {
-        listView.getSelectionModel().selectedItemProperty().addListener(
-                (ChangeListener<ModelRestaurant>) (observable, oldValue, newValue) -> {
-                    rangeSelectedItem = model.getListOfMyRestaurants().indexOf(newValue);
-                    // --> GRRR! in javaFX the field Name is kbown in the Controller class (not in the view)
-                    controller.getChoosenName().setText(newValue.getName());
-                });
-    }
 
 }

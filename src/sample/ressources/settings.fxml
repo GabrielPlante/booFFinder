@@ -15,14 +15,15 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<TabPane fx:id="tabpane" nodeOrientation="LEFT_TO_RIGHT" prefHeight="578.0" prefWidth="822.0" side="LEFT" stylesheets="@settings.css" tabClosingPolicy="UNAVAILABLE" tabMaxWidth="0.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1">
+<?import javafx.scene.control.ListView?>
+<TabPane fx:id="tabpane" nodeOrientation="LEFT_TO_RIGHT" prefHeight="578.0" prefWidth="822.0" side="LEFT" stylesheets="@settings.css" tabClosingPolicy="UNAVAILABLE" tabMaxWidth="0.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <tabs>
       <Tab text="Accueil">
         <content>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
         </content>
       </Tab>
-      <Tab text="Recommandations">
+      <Tab text="Recommendations">
          <content>
             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                <children>
@@ -80,11 +81,7 @@
                               <Font size="40.0" />
                            </font>
                         </Text>
-                        <TableView prefHeight="1000.0" prefWidth="1000.0">
-                          <columns>
-                            <TableColumn prefWidth="611.0" sortType="DESCENDING" text="Restaurant" />
-                          </columns>
-                        </TableView>
+                        <ListView fx:id="cutomersListView" layoutX="45.0" layoutY="10.0" prefHeight="150.0" prefWidth="250.0" />
                      </children>
                   </VBox>
                </children></AnchorPane>

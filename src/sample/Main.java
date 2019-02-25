@@ -5,15 +5,44 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import sample.controllers.ControllerCostumer;
+import sample.models.ModelListOfMyRestaurants;
 
 public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("settings.fxml"));
-        primaryStage.setTitle("BooFFinder");
-        primaryStage.setScene(new Scene(root, 800, 450));
+
+        FXMLLoader loader = new FXMLLoader();
+
+        ViewCustumer view = new ViewCustumer();
+
+        //create a controller
+        ControllerCostumer controller = new ControllerCostumer();
+
+        //attach controller
+        loader.setController(controller);
+
+        //attach XML file
+        Parent root = loader.load(getClass().getResourceAsStream(view.XML_FILE));
+
+        //attach css file
+        root.getStylesheets().add(view.CSS);
+
+        ModelListOfMyRestaurants model = new ModelListOfMyRestaurants();
+
+        //initialize the controller
+        controller.init( model, view );
+
+        view.init( model, controller );
+
+        //create the view
+        primaryStage.setScene(new Scene(root, view.WIDTH, view.HEIGHT));
+        primaryStage.setTitle(view.LABEL);
+
+        //show the view
         primaryStage.show();
+
 
     }
 

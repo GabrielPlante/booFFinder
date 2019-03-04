@@ -16,7 +16,7 @@
 <?import javafx.scene.text.Text?>
 
 <?import javafx.scene.control.ListView?>
-<TabPane fx:id="tabpane" nodeOrientation="LEFT_TO_RIGHT" prefHeight="578.0" prefWidth="822.0" side="LEFT" stylesheets="@settings.css" tabClosingPolicy="UNAVAILABLE" tabMaxWidth="0.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<TabPane fx:id="tabpane" nodeOrientation="LEFT_TO_RIGHT" prefHeight="578.0" prefWidth="822.0" side="LEFT" tabClosingPolicy="UNAVAILABLE" tabMaxWidth="0.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <tabs>
       <Tab text="Accueil">
         <content>
@@ -104,12 +104,12 @@
                                  <children>
                                     <HBox prefHeight="30.0" prefWidth="612.0">
                                        <children>
-                                          <TextField prefHeight="44.0" prefWidth="664.0" promptText="Identifiants">
+                                          <TextField fx:id="friendNameField" prefHeight="44.0" prefWidth="664.0" promptText="Identifiants">
                                              <font>
                                                 <Font size="20.0" />
                                              </font>
                                           </TextField>
-                                          <Button mnemonicParsing="false" prefHeight="44.0" prefWidth="354.0" text="Chercher">
+                                          <Button fx:id="addFriendButton" mnemonicParsing="false" prefHeight="44.0" prefWidth="354.0" text="Ajouter">
                                              <font>
                                                 <Font size="20.0" />
                                              </font>
@@ -125,6 +125,11 @@
                         </HBox>
                      </children>
                      <ListView fx:id="myFriendsListView" layoutX="45.0" layoutY="10.0" prefHeight="150.0" prefWidth="250.0" />
+                     <Button fx:id="removeFriendButton" mnemonicParsing="false" prefHeight="44.0" prefWidth="354.0" text="Supprimer">
+                        <font>
+                           <Font size="20.0" />
+                        </font>
+                     </Button>
                   </VBox>
                </children></AnchorPane>
          </content>

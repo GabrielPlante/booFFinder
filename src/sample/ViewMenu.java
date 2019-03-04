@@ -1,5 +1,6 @@
 package sample;
 
+import javafx.beans.value.ChangeListener;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.control.ListCell;
@@ -25,10 +26,17 @@ public class ViewMenu {
     private static final String RESTAURANT = "resources/restaurant.fxml";
     private static final String FRIEND = "resources/friend.fxml";
 
+    private static int rangeSelectedItemFriend = -1;
+
     private static ModelListOfMyRestaurants modelRestaurant;
     private static ModelListOfMyFriends modelFriend;
 
     private static ControllerMenu controller;
+
+
+    public static int getRangeSelectedItemFriend() {
+        return rangeSelectedItemFriend;
+    }
 
 
 
@@ -45,6 +53,8 @@ public class ViewMenu {
         //call a cell factory and display each observable item in the ListView
         adaptItemsMyRestaurant( controller.getMyRestaurantsListView());
         adaptItemsMyFriends(controller.getMyFriendsListView());
+
+        friendListenTo(controller.getMyFriendsListView());
 
 
     }
@@ -134,6 +144,15 @@ public class ViewMenu {
 
                         };
                     }
+                });
+    }
+
+
+    private void friendListenTo(ListView listView) {
+        listView.getSelectionModel().selectedItemProperty().addListener(
+                (ChangeListener<ModelFriend>) (observable, oldValue, newValue) -> {
+                    rangeSelectedItemFriend = modelFriend.getListOfMyFriends().indexOf(newValue);
+                    // --> GRRR! in javaFX the field Name is kbown in the Controller class (not in the view)
                 });
     }
 

@@ -7,9 +7,9 @@ import sample.models.ModelRestaurant;
 public class ControllerRestaurant {
 
     @FXML
-    private Label name;
+    private Label nameRestaurant;
 
     public void init(ModelRestaurant restaurant) {
-        name.setText(restaurant.getName());
+        nameRestaurant.setText(restaurant.getName());
     }
 }

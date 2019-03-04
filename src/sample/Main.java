@@ -4,12 +4,10 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.image.Image;
 import javafx.stage.Stage;
-import sample.controllers.ControllerCostumer;
+import sample.controllers.ControllerMenu;
+import sample.models.ModelListOfMyFriends;
 import sample.models.ModelListOfMyRestaurants;
-
-import java.awt.*;
 
 public class Main extends Application {
 
@@ -18,10 +16,10 @@ public class Main extends Application {
 
         FXMLLoader loader = new FXMLLoader();
 
-        ViewCustumer view = new ViewCustumer();
+        ViewMenu view = new ViewMenu();
 
         //create a controller
-        ControllerCostumer controller = new ControllerCostumer();
+        ControllerMenu controller = new ControllerMenu();
 
         //attach controller
         loader.setController(controller);
@@ -32,19 +30,17 @@ public class Main extends Application {
         //attach css file
         root.getStylesheets().add(view.CSS);
 
-        ModelListOfMyRestaurants model = new ModelListOfMyRestaurants();
+        ModelListOfMyRestaurants modelRestaurant = new ModelListOfMyRestaurants();
+        ModelListOfMyFriends modelFriend = new ModelListOfMyFriends();
 
         //initialize the controller
-        controller.init( model, view );
+        controller.init( modelRestaurant,modelFriend, view );
 
-        view.init( model, controller );
+        view.init( modelRestaurant, modelFriend,  controller );
 
         //create the view
         primaryStage.setScene(new Scene(root, view.WIDTH, view.HEIGHT));
         primaryStage.setTitle(view.LABEL);
-
-
-        primaryStage.getIcons().add(new Image("sample/resources/icon.png"));
 
         //show the view
         primaryStage.show();

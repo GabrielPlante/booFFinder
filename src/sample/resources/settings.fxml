@@ -16,7 +16,7 @@
 <?import javafx.scene.text.Text?>
 
 <?import javafx.scene.control.ListView?>
-<TabPane fx:id="tabpane" nodeOrientation="LEFT_TO_RIGHT" prefHeight="578.0" prefWidth="822.0" side="LEFT"  tabClosingPolicy="UNAVAILABLE" tabMaxWidth="0.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<TabPane fx:id="tabpane" nodeOrientation="LEFT_TO_RIGHT" prefHeight="578.0" prefWidth="822.0" side="LEFT" stylesheets="@settings.css" tabClosingPolicy="UNAVAILABLE" tabMaxWidth="0.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <tabs>
       <Tab text="Accueil">
         <content>
@@ -81,7 +81,7 @@
                               <Font size="40.0" />
                            </font>
                         </Text>
-                        <ListView fx:id="cutomersListView" layoutX="45.0" layoutY="10.0" prefHeight="150.0" prefWidth="250.0" />
+                        <ListView fx:id="myRestaurantsListView" layoutX="45.0" layoutY="10.0" prefHeight="150.0" prefWidth="250.0" />
                      </children>
                   </VBox>
                </children></AnchorPane>
@@ -124,6 +124,7 @@
                            </children>
                         </HBox>
                      </children>
+                     <ListView fx:id="myFriendsListView" layoutX="45.0" layoutY="10.0" prefHeight="150.0" prefWidth="250.0" />
                   </VBox>
                </children></AnchorPane>
          </content>

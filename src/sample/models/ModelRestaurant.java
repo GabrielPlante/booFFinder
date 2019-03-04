@@ -5,15 +5,15 @@ import javafx.beans.property.StringProperty;
 
 public class ModelRestaurant {
 
-    private StringProperty name;
+    private StringProperty nameRestaurant;
 
     public ModelRestaurant(String name) {
-        this.name = new SimpleStringProperty(name) ;
+        this.nameRestaurant = new SimpleStringProperty(name) ;
     }
 
 
     public String getName() {
-        return name.get();
+        return nameRestaurant.get();
     }
 
 }

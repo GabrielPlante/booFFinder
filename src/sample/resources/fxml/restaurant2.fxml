@@ -8,7 +8,7 @@
 <?import javafx.scene.text.Text?>
 
 
-<AnchorPane fx:id="fond" prefHeight="100.0" prefWidth="388.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="fond" prefHeight="100.0" prefWidth="388.0" xmlns="http://javafx.com/javafx/8.0.181" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <HBox prefHeight="94.0" prefWidth="466.0" spacing="20.0">
          <children>

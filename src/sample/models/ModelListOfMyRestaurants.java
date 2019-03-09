@@ -2,7 +2,8 @@ package sample.models;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import java.util.*;
+
+import java.util.ArrayList;
 
 
 public class ModelListOfMyRestaurants {
@@ -11,8 +12,8 @@ public class ModelListOfMyRestaurants {
 
     public ModelListOfMyRestaurants() {
         listOfMyRestaurants = FXCollections.observableList(new ArrayList<>());
-        listOfMyRestaurants.add(new ModelRestaurant("MacDonald"));
-        listOfMyRestaurants.add(new ModelRestaurant("KFC"));
+        listOfMyRestaurants.add(new ModelRestaurant("MacDonald",4));
+        listOfMyRestaurants.add(new ModelRestaurant("KFC",3));
 
 
     }

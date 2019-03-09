@@ -1,0 +1,29 @@
+.root{
+    -fx-font-family: "Courier New";
+}
+
+#menuBox {
+    -fx-background-color : #7e97c2;
+    -fx-text-fill : #f2ab63;
+}
+#inside {
+    -fx-background-color : #f9fcff;
+}
+#usernameBox {
+    -fx-background-color : #cbdbef;
+}
+#passwordBox {
+    -fx-background-color : #cbdbef;
+}
+
+.button
+{
+    -fx-background-color : #7e97c2;
+    -fx-text-fill : #eefbf3;
+}
+.button:hover{
+    -fx-background-color : #f2ab63;
+}
+.button:pressed {
+    -fx-background-color :#eefbf3;
+}

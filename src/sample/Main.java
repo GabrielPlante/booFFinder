@@ -5,49 +5,33 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import sample.controllers.ControllerMenu;
-import sample.models.ModelListOfMyFriends;
-import sample.models.ModelListOfMyRestaurants;
+import sample.controllers.LogginController;
+import sample.views.LogginView;
+
+import java.io.IOException;
 
 public class Main extends Application {
 
     @Override
-    public void start(Stage primaryStage) throws Exception{
+    public void start(Stage primaryStage) throws IOException{
 
         FXMLLoader loader = new FXMLLoader();
+        LogginController logginController = new LogginController(primaryStage);
+        loader.setController(logginController);
 
-        ViewMenu view = new ViewMenu();
+        try{
+            Parent root = loader.load(getClass().getResourceAsStream(LogginView.XML_FILE));
+            root.getStylesheets().add(LogginView.CSS_FILE);
+            primaryStage.setScene(new Scene(root, LogginView.WIDTH, LogginView.HEIGHT));
+            logginController.init();
+            primaryStage.setTitle(LogginView.LABEL);
+            primaryStage.show();
 
-        //create a controller
-        ControllerMenu controller = new ControllerMenu();
-
-        //attach controller
-        loader.setController(controller);
-
-        //attach XML file
-        Parent root = loader.load(getClass().getResourceAsStream(view.XML_FILE));
-
-        //attach css file
-        root.getStylesheets().add(view.CSS);
-
-        ModelListOfMyRestaurants modelRestaurant = new ModelListOfMyRestaurants();
-        ModelListOfMyFriends modelFriend = new ModelListOfMyFriends();
-
-        //initialize the controller
-        controller.init( modelRestaurant,modelFriend, view );
-
-        view.init( modelRestaurant, modelFriend,  controller );
-
-        //create the view
-        primaryStage.setScene(new Scene(root, view.WIDTH, view.HEIGHT));
-        primaryStage.setTitle(view.LABEL);
-
-        //show the view
-        primaryStage.show();
-
+        } catch (IOException E){
+            E.printStackTrace();
+        }
 
     }
-
 
     public static void main(String[] args) {
         launch(args);

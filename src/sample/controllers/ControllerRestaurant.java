@@ -12,4 +12,7 @@ public class ControllerRestaurant {
     public void init(ModelRestaurant restaurant) {
         nameRestaurant.setText(restaurant.getName());
     }
+
+
+
 }

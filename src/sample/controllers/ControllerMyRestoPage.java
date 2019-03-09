@@ -11,10 +11,7 @@ import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Circle;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
-import sample.models.ModelPlat;
-import sample.models.ModelRestaurant;
-import sample.models.PageLoader;
-import sample.models.User;
+import sample.models.*;
 import sample.views.AccueilView;
 
 public class ControllerMyRestoPage {
@@ -47,6 +44,8 @@ public class ControllerMyRestoPage {
 
     @FXML
     private Circle restaurantImage;
+    @FXML
+    private Button ajouterRestaurant;
 
     private Stage stage;
     private User user;
@@ -75,6 +74,13 @@ public class ControllerMyRestoPage {
         note.setText(String.valueOf(restaurant.getNote()));
         initTablePlats();
 
+        ajouterRestaurant.setOnAction(event -> ajouterRest());
+
+    }
+
+    private void ajouterRest() {
+        user.getMyRestaurants().add(modelRestaurant);
+        user.getMyRecommandations().remove(modelRestaurant);
     }
 
     private void initTablePlats() {

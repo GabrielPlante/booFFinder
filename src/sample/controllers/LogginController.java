@@ -97,7 +97,7 @@ public class LogginController {
         loader.setController(controller);
 
         try {
-            ModelListOfMyRecommandations modelRecommandations = new ModelListOfMyRecommandations();
+            ModelListOfMyRecommandations modelRecommandations = user.getMyRecommandations();
             Parent root = loader.load(getClass().getResourceAsStream("/sample/resources/fxml/Accueil.fxml"));
             root.getStylesheets().add(AccueilView.CSS_FILE);
             //initialize the controller

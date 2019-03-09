@@ -83,11 +83,20 @@
                         </HBox>
                      </children>
                   </VBox>
-                  <Button fx:id="retour" mnemonicParsing="false" prefHeight="44.0" prefWidth="129.0" text="Retour">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Button>
+                  <HBox prefHeight="59.0" prefWidth="527.0" spacing="200.0">
+                     <children>
+                        <Button fx:id="ajouterRestaurant" mnemonicParsing="false" prefHeight="44.0" prefWidth="129.0" text="Ajouter">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="retour" mnemonicParsing="false" prefHeight="44.0" prefWidth="129.0" text="Retour">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
                </children>
             </VBox>
          </children>

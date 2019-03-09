@@ -33,6 +33,10 @@ public class ModelListOfMyRestaurants {
         listOfMyRestaurants.add(restaurant);
     }
 
+    public void remove(ModelRestaurant restaurant) {
+        listOfMyRestaurants.remove(restaurant);
+    }
+
     public ObservableList<ModelRestaurant> getListOfMyRestaurants() {
         return listOfMyRestaurants;
     }

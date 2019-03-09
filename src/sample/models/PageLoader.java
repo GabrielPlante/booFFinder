@@ -28,11 +28,12 @@ public class PageLoader {
         loader.setController(controller);
 
         try {
-            ModelListOfMyRecommandations modelRecommandations = new ModelListOfMyRecommandations();
+            ModelListOfMyRecommandations modelRecommandations = user.getMyRecommandations();
             Parent root = loader.load(getClass().getResourceAsStream("/sample/resources/fxml/Accueil.fxml"));
             root.getStylesheets().add(AccueilView.CSS_FILE);
             //initialize the controller
             controller.init(modelRecommandations);
+            AccueilView.init(modelRecommandations,controller);
             //create the view
             this.stage.setScene(new Scene(root, AccueilView.WIDTH, AccueilView.HEIGHT));
             this.stage.setTitle(AccueilView.LABEL);
@@ -101,7 +102,7 @@ public class PageLoader {
 
         try {
 
-            ModelListOfMyRestaurants modelRestaurant = new ModelListOfMyRestaurants();
+            ModelListOfMyRestaurants modelRestaurant = user.getMyRestaurants();
 
             Parent root = loader.load(getClass().getResourceAsStream("/sample/resources/fxml/MesRestos.fxml"));
             root.getStylesheets().add(MesRestosView.CSS_FILE);

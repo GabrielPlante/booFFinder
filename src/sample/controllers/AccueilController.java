@@ -65,10 +65,18 @@ public class AccueilController {
         main_menu_mesRestos.setOnAction(event -> openMesRestos());
         main_menu_mesAmis.setOnAction(event -> openMesAmis());
         main_menu_parametres.setOnAction(event -> openParametres());
+        voirRestaurant.setOnAction(event -> openRestaurant());
         mainLogoImage.setImage(AccueilView.image);
 
+        ajouterRestaurant.setOnAction(event -> ajouterRest());
 
 
+
+    }
+
+    private void ajouterRest() {
+        user.getMyRestaurants().add(modelListOfMyRecommandations.getListOfMyRestaurants().get(AccueilView.getRangeSelectedItem()));
+        user.getMyRecommandations().remove(modelListOfMyRecommandations.getListOfMyRestaurants().get(AccueilView.getRangeSelectedItem()));
     }
 
     private void openAccueil() {
@@ -81,5 +89,8 @@ public class AccueilController {
         pg.openMesAmis();
     }
     private void openParametres() {pg.openParametres();}
+    private void openRestaurant() {
+        pg.openMesRestosPage(modelListOfMyRecommandations.getListOfMyRestaurants().get(AccueilView.getRangeSelectedItem()));
+    }
 
 }

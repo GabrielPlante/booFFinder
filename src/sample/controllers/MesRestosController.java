@@ -57,9 +57,9 @@ public class MesRestosController {
         main_menu_accueil.setOnAction(event -> openAccueil());
         main_menu_mesRestos.setOnAction(event -> openMesRestos());
         main_menu_mesAmis.setOnAction(event -> openMesAmis());
-        main_menu_mesRecommandations.setOnAction(event -> openMesRecommandations());
         main_menu_parametres.setOnAction(event -> openParametres());
         mainLogoImage.setImage(AccueilView.image);
+
         allerSurLaPage.setOnAction(event -> openMesRestosPage());
 
     }
@@ -82,7 +82,6 @@ public class MesRestosController {
     private void openMesAmis() {
         pg.openMesAmis();
     }
-    private void openMesRecommandations() {pg.openMesRecommandations();}
     private void openParametres() {pg.openParametres();}
 
 

@@ -7,7 +7,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
@@ -42,52 +41,44 @@
          <children>
             <VBox alignment="BOTTOM_RIGHT" fillWidth="false" layoutX="22.0" layoutY="20.0" prefHeight="438.0" prefWidth="510.0" spacing="30.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0">
                <children>
-                  <VBox prefHeight="373.0" prefWidth="456.0" spacing="20.0">
+                  <VBox prefHeight="431.0" prefWidth="456.0" spacing="20.0">
                      <children>
-                        <HBox fillHeight="false" prefHeight="100.0" prefWidth="200.0" spacing="100.0">
+                        <HBox prefHeight="100.0" prefWidth="200.0">
                            <children>
-                              <Text fx:id="nomRestaurant" strokeType="OUTSIDE" strokeWidth="0.0" text="Restaurant" wrappingWidth="251.2064208984375">
+                              <Text fx:id="nomAmis" strokeType="OUTSIDE" strokeWidth="0.0" text="Amis" wrappingWidth="357.18555450439453">
                                  <font>
                                     <Font size="30.0" />
                                  </font>
                               </Text>
-                              <Circle fx:id="restaurantImage" fill="DODGERBLUE" radius="50.0" stroke="BLACK" strokeType="INSIDE" />
+                              <Button fx:id="retour" mnemonicParsing="false" prefHeight="44.0" prefWidth="134.0" text="Retour">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Button>
                            </children>
                         </HBox>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Menu">
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Restaurants préférés">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Text>
+                        <VBox prefHeight="215.0" prefWidth="456.0">
+                           <children>
+                              <TableView fx:id="tableRestaurants" prefHeight="130.0" prefWidth="456.0" />
+                           </children>
+                        </VBox>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Catégories">
                            <font>
                               <Font size="20.0" />
                            </font>
                         </Text>
                         <VBox prefHeight="200.0" prefWidth="100.0">
                            <children>
-                              <TableView fx:id="tablePlats" prefHeight="200.0" prefWidth="200.0" />
+                              <TableView fx:id="tableRegimes" prefHeight="183.0" prefWidth="456.0" />
                            </children>
                         </VBox>
-                        <HBox prefHeight="23.0" prefWidth="456.0">
-                           <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Note" wrappingWidth="43.916015625">
-                                 <font>
-                                    <Font size="20.0" />
-                                 </font>
-                                 <HBox.margin>
-                                    <Insets right="30.0" />
-                                 </HBox.margin>
-                              </Text>
-                              <Text fx:id="note" strokeType="OUTSIDE" strokeWidth="0.0" text="5">
-                                 <font>
-                                    <Font size="20.0" />
-                                 </font>
-                              </Text>
-                           </children>
-                        </HBox>
                      </children>
                   </VBox>
-                  <Button fx:id="retour" mnemonicParsing="false" prefHeight="44.0" prefWidth="129.0" text="Retour">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Button>
                </children>
             </VBox>
          </children>

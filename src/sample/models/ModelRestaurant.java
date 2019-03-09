@@ -10,13 +10,26 @@ public class ModelRestaurant {
     private StringProperty nameRestaurant;
     private ArrayList<ModelPlat> plats;
     private int note;
+    private String description;
+    private String fileName;
 
-    public ModelRestaurant(String name, int note, ArrayList<ModelPlat> plats) {
+    public ModelRestaurant(String name, int note, ArrayList<ModelPlat> plats, String fileName,String description) {
         this.nameRestaurant = new SimpleStringProperty(name) ;
         this.note = note;
         this.plats = plats;
+        this.description = description;
+        this.fileName = fileName;
     }
 
+    public String getDescription() {
+        if (description.equals("")) return "Aucune description";
+        return description;
+    }
+
+    public String getUrl() {
+        if (fileName.equals("")) return "sample/resources/images/restaurant.jpg";
+        return "sample/resources/images/" + fileName;
+    }
 
     public String getName() {
         return nameRestaurant.get();

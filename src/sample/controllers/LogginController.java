@@ -10,6 +10,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
+import sample.models.ModelListOfMyRecommandations;
 import sample.models.User;
 import sample.models.UserList;
 import sample.views.AccueilView;
@@ -96,10 +97,11 @@ public class LogginController {
         loader.setController(controller);
 
         try {
+            ModelListOfMyRecommandations modelRecommandations = new ModelListOfMyRecommandations();
             Parent root = loader.load(getClass().getResourceAsStream("/sample/resources/fxml/Accueil.fxml"));
             root.getStylesheets().add(AccueilView.CSS_FILE);
             //initialize the controller
-            controller.init();
+            controller.init(modelRecommandations);
             //create the view
             this.stage.setScene(new Scene(root, AccueilView.WIDTH, AccueilView.HEIGHT));
             this.stage.setTitle(AccueilView.LABEL);

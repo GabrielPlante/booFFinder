@@ -6,6 +6,7 @@ import javafx.scene.Parent;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
 import javafx.util.Callback;
+import sample.controllers.ControllerRecommandation;
 import sample.controllers.ControllerRestaurant;
 import sample.controllers.MesRestosController;
 import sample.models.ModelListOfMyRestaurants;
@@ -61,13 +62,13 @@ public class MesRestosView {
                                 if (item != null) {
                                     Parent listElement=null;
                                     // Load fxml file for this Person
-                                    FXMLLoader loader = new FXMLLoader(getClass().getResource("sample/resources/fxml/restaurant.fxml"));
+                                    FXMLLoader loader = new FXMLLoader(getClass().getResource("sample/resources/fxml/restaurant2.fxml"));
                                     //create the person controller
-                                    ControllerRestaurant controller = new ControllerRestaurant();
+                                    ControllerRecommandation controller = new ControllerRecommandation();
                                     //attach the person controller to this person
                                     loader.setController(controller);
                                     try {
-                                        listElement = loader.load(getClass().getResourceAsStream("../resources/fxml/restaurant.fxml"));
+                                        listElement = loader.load(getClass().getResourceAsStream("../resources/fxml/restaurant2.fxml"));
                                     } catch (IOException e) {
                                         e.printStackTrace();
                                     }

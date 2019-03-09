@@ -10,6 +10,8 @@ import sample.models.*;
 import sample.views.AccueilView;
 import sample.views.MesFriendsView;
 
+import java.util.ArrayList;
+
 public class MesAmisController {
 
     private ModelListOfMyFriends modelListOfMyFriends = null;
@@ -43,6 +45,9 @@ public class MesAmisController {
     @FXML
     private ImageView mainLogoImage;
 
+    @FXML
+    private Button voirFriendButton;
+
 
     private Stage stage;
     private User user;
@@ -61,19 +66,26 @@ public class MesAmisController {
         main_menu_accueil.setOnAction(event -> openAccueil());
         main_menu_mesRestos.setOnAction(event -> openMesRestos());
         main_menu_mesAmis.setOnAction(event -> openMesAmis());
-        main_menu_mesRecommandations.setOnAction(event -> openMesRecommandations());
         main_menu_parametres.setOnAction(event -> openParametres());
         mainLogoImage.setImage(AccueilView.image);
 
+        voirFriendButton.setOnAction(event -> openFriendPage());
+
 
         addFriendButton.setOnAction( event -> {
-            modelListOfMyFriends.add( new ModelFriend(friendNameField.getText()));
+            modelListOfMyFriends.add( new ModelPerson(friendNameField.getText(),new ArrayList<>(), new ArrayList<>()));
         });
 
         removeFriendButton.setOnAction( event -> {
             modelListOfMyFriends.getListOfMyFriends().remove( MesFriendsView.getRangeSelectedItemFriend() );
         });
 
+
+
+    }
+
+    private void openFriendPage() {
+        pg.openMesAmisPage(modelListOfMyFriends.getListOfMyFriends().get(MesFriendsView.getRangeSelectedItemFriend()));
     }
 
     public ListView getMyFriendsListView() {
@@ -89,7 +101,6 @@ public class MesAmisController {
     private void openMesAmis() {
         pg.openMesAmis();
     }
-    private void openMesRecommandations() {pg.openMesRecommandations();}
     private void openParametres() {pg.openParametres();}
 
 

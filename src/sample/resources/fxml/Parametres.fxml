@@ -23,10 +23,6 @@
                <font>
                   <Font size="16.0" />
                </font></Button>
-            <Button fx:id="main_menu_mesRecommandations" mnemonicParsing="false" prefHeight="38.0" prefWidth="160.0" text="Recommandations">
-               <font>
-                  <Font size="16.0" />
-               </font></Button>
             <Button fx:id="main_menu_mesRestos" mnemonicParsing="false" prefHeight="38.0" prefWidth="160.0" text="Mes Restos">
                <font>
                   <Font size="16.0" />

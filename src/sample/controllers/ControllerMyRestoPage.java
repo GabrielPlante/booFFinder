@@ -5,7 +5,10 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.paint.ImagePattern;
+import javafx.scene.shape.Circle;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import sample.models.ModelPlat;
@@ -42,6 +45,9 @@ public class ControllerMyRestoPage {
     @FXML
     private TableView tablePlats;
 
+    @FXML
+    private Circle restaurantImage;
+
     private Stage stage;
     private User user;
     private PageLoader pg;
@@ -60,12 +66,11 @@ public class ControllerMyRestoPage {
         main_menu_accueil.setOnAction(event -> openAccueil());
         main_menu_mesRestos.setOnAction(event -> openMesRestos());
         main_menu_mesAmis.setOnAction(event -> openMesAmis());
-        main_menu_mesRecommandations.setOnAction(event -> openMesRecommandations());
         main_menu_parametres.setOnAction(event -> openParametres());
         mainLogoImage.setImage(AccueilView.image);
         retour.setOnAction(event ->openMesRestos());
 
-
+        restaurantImage.setFill(new ImagePattern(new Image(restaurant.getUrl())));
         nomRestaurant.setText(restaurant.getName());
         note.setText(String.valueOf(restaurant.getNote()));
         initTablePlats();
@@ -104,7 +109,6 @@ public class ControllerMyRestoPage {
     private void openMesAmis() {
         pg.openMesAmis();
     }
-    private void openMesRecommandations() {pg.openMesRecommandations();}
     private void openParametres() {pg.openParametres();}
 
 }

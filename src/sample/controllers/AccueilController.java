@@ -2,14 +2,19 @@ package sample.controllers;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.ListView;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
+import sample.models.ModelListOfMyRecommandations;
+import sample.models.ModelListOfMyRestaurants;
 import sample.models.PageLoader;
 import sample.models.User;
 import sample.views.AccueilView;
 
 
 public class AccueilController {
+
+    private ModelListOfMyRecommandations modelListOfMyRecommandations = null;
 
     @FXML
     private Button main_menu_accueil;
@@ -28,6 +33,13 @@ public class AccueilController {
     @FXML
     private ImageView mainLogoImage;
 
+    @FXML
+    private ListView recommandationsListView;
+    @FXML
+    private Button voirRestaurant;
+    @FXML
+    private Button ajouterRestaurant;
+
 
     private Stage stage;
     private User user;
@@ -40,12 +52,17 @@ public class AccueilController {
 
     }
 
-    public void init() {
+    public ListView getMyRestaurantsListView() {
+        return recommandationsListView;
+    }
+
+    public void init(ModelListOfMyRecommandations recommandations) {
+
+        modelListOfMyRecommandations = recommandations;
 
         main_menu_accueil.setOnAction(event -> openAccueil());
         main_menu_mesRestos.setOnAction(event -> openMesRestos());
         main_menu_mesAmis.setOnAction(event -> openMesAmis());
-        main_menu_mesRecommandations.setOnAction(event -> openMesRecommandations());
         main_menu_parametres.setOnAction(event -> openParametres());
         mainLogoImage.setImage(AccueilView.image);
 
@@ -62,7 +79,6 @@ public class AccueilController {
     private void openMesAmis() {
         pg.openMesAmis();
     }
-    private void openMesRecommandations() {pg.openMesRecommandations();}
     private void openParametres() {pg.openParametres();}
 
 }

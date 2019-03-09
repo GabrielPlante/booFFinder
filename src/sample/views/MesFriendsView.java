@@ -1,18 +1,15 @@
 package sample.views;
 
+import javafx.beans.value.ChangeListener;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
 import javafx.util.Callback;
 import sample.controllers.ControllerFriend;
-import sample.controllers.ControllerRestaurant;
 import sample.controllers.MesAmisController;
-import sample.controllers.MesRestosController;
-import sample.models.ModelFriend;
+import sample.models.ModelPerson;
 import sample.models.ModelListOfMyFriends;
-import sample.models.ModelListOfMyRestaurants;
-import sample.models.ModelRestaurant;
 
 import java.io.IOException;
 
@@ -44,7 +41,11 @@ public class MesFriendsView {
 
         //call a cell factory and display each observable item in the ListView
         adaptItemsMyFriends( controller.getMyFriendsListView());
+
+        listenTo(controller.getMyFriendsListView());
     }
+
+
 
 
     /**
@@ -79,7 +80,7 @@ public class MesFriendsView {
                                         e.printStackTrace();
                                     }
                                     //initialize the person controller
-                                    controller.init((ModelFriend) item);
+                                    controller.init((ModelPerson) item);
                                     // Display content of the fxml file
                                     setGraphic(listElement);
                                     adaptItemsMyFriends(listView);
@@ -92,6 +93,16 @@ public class MesFriendsView {
                     }
                 });
     }
+
+    private static void listenTo(ListView listView) {
+        listView.getSelectionModel().selectedItemProperty().addListener(
+                (ChangeListener<ModelPerson>) (observable, oldValue, newValue) -> {
+                    rangeSelectedItemFriend = modelFriend.getListOfMyFriends().indexOf(newValue);
+                    // --> GRRR! in javaFX the field Name is kbown in the Controller class (not in the view)
+                });
+    }
+
+
 
 
 }

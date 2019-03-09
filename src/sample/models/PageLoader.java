@@ -28,36 +28,14 @@ public class PageLoader {
         loader.setController(controller);
 
         try {
+            ModelListOfMyRecommandations modelRecommandations = new ModelListOfMyRecommandations();
             Parent root = loader.load(getClass().getResourceAsStream("/sample/resources/fxml/Accueil.fxml"));
             root.getStylesheets().add(AccueilView.CSS_FILE);
             //initialize the controller
-            controller.init();
+            controller.init(modelRecommandations);
             //create the view
             this.stage.setScene(new Scene(root, AccueilView.WIDTH, AccueilView.HEIGHT));
             this.stage.setTitle(AccueilView.LABEL);
-
-            //show the view
-            this.stage.show();
-        } catch (IOException E) {
-            E.printStackTrace();
-        }
-    }
-
-    public void openMesRecommandations() {
-        FXMLLoader loader = new FXMLLoader();
-        MesRecommandationsController controller= new MesRecommandationsController(this.stage, this.user);
-
-        //attach controller
-        loader.setController(controller);
-
-        try {
-            Parent root = loader.load(getClass().getResourceAsStream("/sample/resources/fxml/MesRecommandations.fxml"));
-            root.getStylesheets().add(MesRecommandationsView.CSS_FILE);
-            //initialize the controller
-            controller.init();
-            //create the view
-            this.stage.setScene(new Scene(root, MesRecommandationsView.WIDTH, MesRecommandationsView.HEIGHT));
-            this.stage.setTitle(MesRecommandationsView.LABEL);
 
             //show the view
             this.stage.show();
@@ -163,6 +141,34 @@ public class PageLoader {
             //create the view
             this.stage.setScene(new Scene(root, MesRestosView.WIDTH, MesRestosView.HEIGHT));
             this.stage.setTitle(MesRestosView.LABEL);
+
+            //show the view
+            this.stage.show();
+        } catch (IOException E) {
+            E.printStackTrace();
+        }
+
+    }
+
+    public void openMesAmisPage(ModelPerson person) {
+        FXMLLoader loader = new FXMLLoader();
+        ControllerMyFriendPage controller = new ControllerMyFriendPage(this.stage, this.user);
+
+        //attach controller
+        loader.setController(controller);
+
+        try {
+
+
+            Parent root = loader.load(getClass().getResourceAsStream("/sample/resources/fxml/FriendPage.fxml"));
+            root.getStylesheets().add(MesRestosView.CSS_FILE);
+            //initialize the controller
+
+            controller.init(person);
+
+            //create the view
+            this.stage.setScene(new Scene(root, MesFriendsView.WIDTH, MesFriendsView.HEIGHT));
+            this.stage.setTitle(MesFriendsView.LABEL);
 
             //show the view
             this.stage.show();

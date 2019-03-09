@@ -6,13 +6,13 @@ import javafx.beans.property.StringProperty;
 public class ModelPlat {
 
     private StringProperty namePlat;
-    private int prix;
-    private int calories;
+    private StringProperty prix;
+    private StringProperty calories;
 
     public ModelPlat(String name, int prix, int calories) {
         this.namePlat = new SimpleStringProperty(name) ;
-        this.prix = prix;
-        this.calories = calories;
+        this.prix = new SimpleStringProperty(String.valueOf(prix));
+        this.calories = new SimpleStringProperty(String.valueOf(calories));
 
     }
 
@@ -21,11 +21,11 @@ public class ModelPlat {
         return namePlat.get();
     }
 
-    public int getPrix() {
-        return prix;
+    public String getPrix() {
+        return prix.get();
     }
 
-    public int getCalories() {
-        return calories;
+    public String getCalories() {
+        return calories.get();
     }
 }

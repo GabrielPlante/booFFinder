@@ -1,5 +1,6 @@
 package sample.views;
 
+import javafx.beans.value.ChangeListener;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.control.ListCell;
@@ -20,20 +21,22 @@ public class MesRestosView {
     public static final int WIDTH = 720;
     public static final int HEIGHT = 480;
 
+    private static int rangeSelectedItem = -1;
+
     private static ModelListOfMyRestaurants modelRestaurant;
     private static MesRestosController controller;
 
-    public static void init(ModelListOfMyRestaurants modelRestaurant,  MesRestosController controller) {
-        MesRestosView.modelRestaurant = modelRestaurant;
+    public static void init( ModelListOfMyRestaurants model, MesRestosController controller) {
 
+        MesRestosView.modelRestaurant = model;
         MesRestosView.controller = controller;
         //init the ObservableList of custumers to the ListView
-
         controller.getMyRestaurantsListView().setItems(modelRestaurant.getListOfMyRestaurants());
 
 
         //call a cell factory and display each observable item in the ListView
         adaptItemsMyRestaurant( controller.getMyRestaurantsListView());
+        listenTo(controller.getMyRestaurantsListView());
     }
 
 
@@ -83,5 +86,15 @@ public class MesRestosView {
                 });
     }
 
+    private static void listenTo(ListView listView) {
+        listView.getSelectionModel().selectedItemProperty().addListener(
+                (ChangeListener<ModelRestaurant>) (observable, oldValue, newValue) -> {
+                    rangeSelectedItem = modelRestaurant.getListOfMyRestaurants().indexOf(newValue);
+                    // --> GRRR! in javaFX the field Name is kbown in the Controller class (not in the view)
+                });
+    }
 
+    public static int getRangeSelectedItem() {
+        return rangeSelectedItem;
+    }
 }

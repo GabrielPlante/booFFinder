@@ -9,6 +9,7 @@ import sample.models.ModelListOfMyRestaurants;
 import sample.models.PageLoader;
 import sample.models.User;
 import sample.views.AccueilView;
+import sample.views.MesRestosView;
 
 public class MesRestosController {
 
@@ -69,7 +70,8 @@ public class MesRestosController {
 
 
     private void openMesRestosPage() {
-        pg.openMesRestosPage();
+
+        pg.openMesRestosPage(modelListOfMyRestaurants.getListOfMyRestaurants().get(MesRestosView.getRangeSelectedItem()));
     }
     private void openAccueil() {
         pg.openAccueil();

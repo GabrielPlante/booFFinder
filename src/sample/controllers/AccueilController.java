@@ -60,6 +60,7 @@ public class AccueilController {
 
         modelListOfMyRecommandations = recommandations;
 
+
         main_menu_accueil.setOnAction(event -> openAccueil());
         main_menu_mesRestos.setOnAction(event -> openMesRestos());
         main_menu_mesAmis.setOnAction(event -> openMesAmis());

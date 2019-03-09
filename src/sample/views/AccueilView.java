@@ -9,6 +9,7 @@ import javafx.scene.image.Image;
 import javafx.util.Callback;
 import sample.controllers.AccueilController;
 import sample.controllers.ControllerRecommandation;
+import sample.models.ModelListOfMyRecommandations;
 import sample.models.ModelListOfMyRestaurants;
 import sample.models.ModelRestaurant;
 
@@ -25,10 +26,10 @@ public class AccueilView {
 
     private static int rangeSelectedItem = -1;
 
-    private static ModelListOfMyRestaurants modelRestaurant;
+    private static ModelListOfMyRecommandations modelRestaurant;
     private static AccueilController controller;
 
-    public static void init( ModelListOfMyRestaurants model, AccueilController controller) {
+    public static void init( ModelListOfMyRecommandations model, AccueilController controller) {
 
         AccueilView.modelRestaurant = model;
         AccueilView.controller= controller;

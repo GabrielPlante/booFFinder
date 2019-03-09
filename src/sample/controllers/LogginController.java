@@ -102,6 +102,7 @@ public class LogginController {
             root.getStylesheets().add(AccueilView.CSS_FILE);
             //initialize the controller
             controller.init(modelRecommandations);
+            AccueilView.init(modelRecommandations,controller);
             //create the view
             this.stage.setScene(new Scene(root, AccueilView.WIDTH, AccueilView.HEIGHT));
             this.stage.setTitle(AccueilView.LABEL);

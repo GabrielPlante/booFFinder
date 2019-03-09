@@ -11,9 +11,20 @@ public class ModelListOfMyRestaurants {
     private ObservableList<ModelRestaurant> listOfMyRestaurants;
 
     public ModelListOfMyRestaurants() {
+
+        ModelPlat pates = new ModelPlat("Pâtes",10,100);
+        ModelPlat steak = new ModelPlat("Steak Frite",12,400);
+
+        ArrayList<ModelPlat> plats1 = new ArrayList<>();
+        ArrayList<ModelPlat> plats2 = new ArrayList<>();
+
+        plats1.add(pates);
+        plats1.add(steak);
+        plats2.add(steak);
+
         listOfMyRestaurants = FXCollections.observableList(new ArrayList<>());
-        listOfMyRestaurants.add(new ModelRestaurant("MacDonald",4));
-        listOfMyRestaurants.add(new ModelRestaurant("KFC",3));
+        listOfMyRestaurants.add(new ModelRestaurant("MacDonald",4,plats1));
+        listOfMyRestaurants.add(new ModelRestaurant("KFC",3,plats2));
 
 
     }

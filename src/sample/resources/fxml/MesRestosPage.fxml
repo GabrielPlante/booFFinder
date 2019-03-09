@@ -2,13 +2,16 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<?import javafx.scene.image.ImageView?>
-
-<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="481.0" prefWidth="730.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="481.0" prefWidth="730.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <VBox fx:id="menuBox" alignment="CENTER" prefHeight="482.0" prefWidth="178.0" spacing="20.0">
          <children>
@@ -39,6 +42,63 @@
             <Insets />
          </opaqueInsets>
       </VBox>
-      <Button fx:id="retour" mnemonicParsing="false" text="Retour" />
+      <AnchorPane fx:id="inside" prefHeight="500.0" prefWidth="550.0">
+         <children>
+            <VBox alignment="BOTTOM_RIGHT" fillWidth="false" layoutX="22.0" layoutY="20.0" prefHeight="438.0" prefWidth="510.0" spacing="30.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0">
+               <children>
+                  <VBox prefHeight="373.0" prefWidth="456.0" spacing="20.0">
+                     <children>
+                        <Text fx:id="nomRestaurant" strokeType="OUTSIDE" strokeWidth="0.0" text="Restaurant">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="20.0" />
+                           </VBox.margin>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Menu">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Text>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <TableView fx:id="tablePlats" prefHeight="200.0" prefWidth="200.0">
+                                <columns>
+                                  <TableColumn fx:id="colonnePlat" prefWidth="246.0" text="Plat" />
+                                  <TableColumn fx:id="colonnePrix" prefWidth="96.0" text="Prix" />
+                                    <TableColumn fx:id="colonneCalories" prefWidth="113.0" text="Calories" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </VBox>
+                        <HBox prefHeight="23.0" prefWidth="456.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Note" wrappingWidth="43.916015625">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="30.0" />
+                                 </HBox.margin>
+                              </Text>
+                              <Text fx:id="note" strokeType="OUTSIDE" strokeWidth="0.0" text="5">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <Button fx:id="retour" mnemonicParsing="false" prefHeight="44.0" prefWidth="129.0" text="Retour">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
    </children>
 </HBox>

@@ -36,6 +36,10 @@ public class ModelListOfMyFriends {
         listOfMyFriends.add(friend);
     }
 
+    public void remove(ModelPerson friend) {
+        listOfMyFriends.remove(friend);
+    }
+
     public ObservableList<ModelPerson> getListOfMyFriends() {
         return listOfMyFriends;
     }

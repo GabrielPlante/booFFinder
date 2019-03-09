@@ -76,7 +76,7 @@ public class PageLoader {
         loader.setController(controller);
 
         try {
-            ModelListOfMyFriends modelListOfMyFriends = new ModelListOfMyFriends();
+            ModelListOfMyFriends modelListOfMyFriends = user.getMyFriends();
             Parent root = loader.load(getClass().getResourceAsStream("/sample/resources/fxml/myFriends.fxml"));
             root.getStylesheets().add(MesFriendsView.CSS_FILE);
             //initialize the controller

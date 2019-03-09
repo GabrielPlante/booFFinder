@@ -7,6 +7,7 @@ public class User {
     private String password;
     private ModelListOfMyRestaurants myRestaurants;
     private ModelListOfMyRecommandations myRecommandations;
+    private ModelListOfMyFriends myFriends;
 
     public User(String username, String email, String password) {
         this.username = username;
@@ -14,6 +15,7 @@ public class User {
         this.password = password;
         myRestaurants = new ModelListOfMyRestaurants();
         myRecommandations = new ModelListOfMyRecommandations();
+        myFriends = new ModelListOfMyFriends();
     }
 
     public String getUsername() {
@@ -34,5 +36,9 @@ public class User {
 
     public ModelListOfMyRecommandations getMyRecommandations() {
         return myRecommandations;
+    }
+
+    public ModelListOfMyFriends getMyFriends() {
+        return myFriends;
     }
 }

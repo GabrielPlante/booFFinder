@@ -6,6 +6,9 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import sample.controllers.LogginController;
+import sample.models.ModelRegimeDataBase;
+import sample.models.ModelRestaurantDataBase;
+import sample.models.ModelUserDatabase;
 import sample.views.LogginView;
 
 import java.io.IOException;
@@ -14,6 +17,11 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException{
+
+
+        ModelRegimeDataBase modelRegimeDataBase = new ModelRegimeDataBase();
+        ModelRestaurantDataBase modelRestaurantDataBase = new ModelRestaurantDataBase(modelRegimeDataBase);
+        ModelUserDatabase modelUserDatabase = new ModelUserDatabase(modelRestaurantDataBase,modelRegimeDataBase);
 
         FXMLLoader loader = new FXMLLoader();
         LogginController logginController = new LogginController(primaryStage);

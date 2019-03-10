@@ -12,13 +12,15 @@ public class ModelRestaurant {
     private int note;
     private String description;
     private String fileName;
+    private ModelListOfRegimes regimes;
 
-    public ModelRestaurant(String name, int note, ArrayList<ModelPlat> plats, String fileName,String description) {
+    public ModelRestaurant(String name, int note, ArrayList<ModelPlat> plats, String fileName,String description, ModelListOfRegimes regimes) {
         this.nameRestaurant = new SimpleStringProperty(name) ;
         this.note = note;
         this.plats = plats;
         this.description = description;
         this.fileName = fileName;
+        this.regimes = regimes;
     }
 
     public String getDescription() {
@@ -41,5 +43,9 @@ public class ModelRestaurant {
 
     public ArrayList<ModelPlat> getPlats() {
         return plats;
+    }
+
+    public ModelListOfRegimes getRegimes() {
+        return regimes;
     }
 }

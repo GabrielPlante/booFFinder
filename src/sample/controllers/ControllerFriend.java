@@ -2,14 +2,14 @@ package sample.controllers;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
-import sample.models.ModelPerson;
+import sample.models.User;
 
 public class ControllerFriend {
 
     @FXML
-    private Label nameFriend;
+    private Label name;
 
-    public void init(ModelPerson friend) {
-        nameFriend.setText(friend.getName());
+    public void init(User friend) {
+        name.setText(friend.getUsername());
     }
 }

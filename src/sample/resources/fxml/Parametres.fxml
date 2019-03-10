@@ -13,7 +13,7 @@
 <?import javafx.scene.text.Text?>
 
 <?import javafx.scene.image.ImageView?>
-<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="481.0" prefWidth="730.0" xmlns="http://javafx.com/javafx/8.0.181" xmlns:fx="http://javafx.com/fxml/1">
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="481.0" prefWidth="730.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <VBox fx:id="menuBox" alignment="CENTER" prefHeight="482.0" prefWidth="178.0" spacing="20.0">
          <children>
@@ -89,7 +89,7 @@
                                     <Font size="20.0" />
                                  </font>
                               </Text>
-                              <PasswordField fx:id="motDePasseInfo" prefHeight="30.0" prefWidth="200.0" />
+                              <PasswordField fx:id="motDePasseInfo" prefHeight="30.0" prefWidth="200.0" promptText="Nouveau mot de passe" />
                            </children>
                         </HBox>
                         <HBox prefHeight="104.0" prefWidth="652.0">
@@ -101,11 +101,11 @@
                               </Text>
                               <VBox prefHeight="85.0" prefWidth="158.0">
                                  <children>
-                                    <CheckBox fx:id="sportifCheck" mnemonicParsing="false" prefWidth="80.0" text="Sportif" />
-                                    <CheckBox fx:id="sainCheck" mnemonicParsing="false" text="Sain" />
-                                    <CheckBox fx:id="gourmandCheck" mnemonicParsing="false" text="Gourmand" />
+                                    <CheckBox fx:id="GourmandCheck" mnemonicParsing="false" prefWidth="80.0" text="Gourmand" />
+                                    <CheckBox fx:id="SansGlutenCheck" mnemonicParsing="false" text="Sans Gluten" />
                                     <CheckBox fx:id="vegetarienCheck" mnemonicParsing="false" text="Végétarien" />
-                                    <CheckBox fx:id="sansGlutenCheck" mnemonicParsing="false" text="Sans Gluten" />
+                                    <CheckBox fx:id="sportifCheck" mnemonicParsing="false" text="Sportif" />
+                                    <CheckBox fx:id="HauteCaloriesCheck" mnemonicParsing="false" text="Haute Calories" />
                                  </children>
                               </VBox>
                            </children>

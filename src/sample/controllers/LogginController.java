@@ -9,12 +9,12 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import sample.models.ModelListOfMyRecommandations;
+import sample.models.ModelUserDatabase;
 import sample.models.User;
-import sample.models.UserList;
 import sample.views.AccueilView;
-import javafx.scene.image.Image ;
 
 
 import java.io.IOException;
@@ -36,10 +36,12 @@ public class LogginController {
     private Button connectionButton;
 
     @FXML
-    private Label badCredentials;
+    private Text mauvaisPassword;
 
     @FXML
     private Button createAccountButton;
+
+
 
 
 
@@ -68,22 +70,26 @@ public class LogginController {
     private void checkConnection() {
         String username = usernameBox.getCharacters().toString();
         String password = passwordBox.getCharacters().toString();
-        openAccueil(UserList.getDatabase().get(0));
-
-        /**
-        if (result != null) {
-            openMainMenu(result);
-        } else {
+        User mainUser = null;
+        for (User user : ModelUserDatabase.getUsers()) {
+            if (user.getUsername().equals(username) && user.getPassword().equals(password)) {
+                mainUser = user;
+                break;
+            }
+        }
+        if (mainUser!=null) {
+            openAccueil(mainUser);
+        }
+        else {
             showBadCredentialsError();
         }
-         **/
 
     }
 
     private void showBadCredentialsError() {
         usernameBox.clear();
         passwordBox.clear();
-        badCredentials.setText("Réessayez");
+        mauvaisPassword.setText("Mauvais mot de passe !");
     }
 
 

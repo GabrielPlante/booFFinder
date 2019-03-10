@@ -62,6 +62,7 @@ public class MesAmisController {
 
     public void init(ModelListOfMyFriends myFriendsList) {
 
+
         this.modelListOfMyFriends= myFriendsList;
         main_menu_accueil.setOnAction(event -> openAccueil());
         main_menu_mesRestos.setOnAction(event -> openMesRestos());
@@ -73,7 +74,7 @@ public class MesAmisController {
 
 
         addFriendButton.setOnAction( event -> {
-            modelListOfMyFriends.add( new ModelPerson(friendNameField.getText(),new ArrayList<>(), new ArrayList<>()));
+            modelListOfMyFriends.add( new User(friendNameField.getText(),"","",new ModelListOfMyRestaurants(), new ModelListOfMyRecommandations(), new ModelListOfMyFriends(), new ModelListOfRegimes()));
         });
 
         removeFriendButton.setOnAction( event -> {

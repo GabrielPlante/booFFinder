@@ -12,17 +12,7 @@ public class ModelListOfMyRecommandations {
 
     public ModelListOfMyRecommandations() {
 
-        ModelPlat pates = new ModelPlat("Poulet",10,1000);
-
-        ArrayList<ModelPlat> plats1 = new ArrayList<>();
-
-
-        plats1.add(pates);
-
         listOfMyRestaurants = FXCollections.observableList(new ArrayList<>());
-        listOfMyRestaurants.add(new ModelRestaurant("Quick",4,plats1,"quick.jpg","Le poulet c'est bon"));
-
-
 
     }
 

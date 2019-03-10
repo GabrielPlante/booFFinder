@@ -151,7 +151,7 @@ public class PageLoader {
 
     }
 
-    public void openMesAmisPage(ModelPerson person) {
+    public void openMesAmisPage(User person) {
         FXMLLoader loader = new FXMLLoader();
         ControllerMyFriendPage controller = new ControllerMyFriendPage(this.stage, this.user);
 

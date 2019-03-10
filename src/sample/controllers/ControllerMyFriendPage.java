@@ -46,7 +46,7 @@ public class ControllerMyFriendPage {
     private Stage stage;
     private User user;
     private PageLoader pg;
-    private ModelPerson modelPerson;
+    private User friend;
 
     public ControllerMyFriendPage(Stage stage, User user) {
         this.stage = stage;
@@ -55,9 +55,9 @@ public class ControllerMyFriendPage {
 
     }
 
-    public void init(ModelPerson amis) {
+    public void init(User amis) {
 
-        this.modelPerson = amis;
+        this.friend = amis;
         main_menu_accueil.setOnAction(event -> openAccueil());
         main_menu_mesRestos.setOnAction(event -> openMesRestos());
         main_menu_mesAmis.setOnAction(event -> openMesAmis());
@@ -66,13 +66,13 @@ public class ControllerMyFriendPage {
         retour.setOnAction(event ->openMesAmis());
 
 
-        nomAmis.setText(amis.getName());
-        initTableRestaurants();
-        initRegimes();
+        nomAmis.setText(amis.getUsername());
+        initTableRestaurants(amis);
+        initRegimes(amis);
 
     }
 
-    private void initTableRestaurants() {
+    private void initTableRestaurants(User amis) {
 
 
         TableColumn nameColumn = new TableColumn("Nom");
@@ -83,12 +83,12 @@ public class ControllerMyFriendPage {
 
         nameColumn.prefWidthProperty().bind(tableRestaurants.widthProperty());
 
-        for (ModelRestaurant modelRestaurant : modelPerson.getModelRestaurants()) {
+        for (ModelRestaurant modelRestaurant : amis.getMyRestaurants().getListOfMyRestaurants()) {
             tableRestaurants.getItems().add(modelRestaurant);
         }
     }
 
-    private void initRegimes() {
+    private void initRegimes(User amis) {
 
         TableColumn nameColumn = new TableColumn("Nom");
         nameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
@@ -97,7 +97,7 @@ public class ControllerMyFriendPage {
 
         nameColumn.prefWidthProperty().bind(tableRegimes.widthProperty());
 
-        for (ModelRegime modelRegime : modelPerson.getRegimes()) {
+        for (ModelRegime modelRegime : amis.getMyRegimes().getRegimes()) {
             tableRegimes.getItems().add(modelRegime);
         }
 

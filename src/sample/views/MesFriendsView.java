@@ -8,8 +8,8 @@ import javafx.scene.control.ListView;
 import javafx.util.Callback;
 import sample.controllers.ControllerFriend;
 import sample.controllers.MesAmisController;
-import sample.models.ModelPerson;
 import sample.models.ModelListOfMyFriends;
+import sample.models.User;
 
 import java.io.IOException;
 
@@ -80,7 +80,7 @@ public class MesFriendsView {
                                         e.printStackTrace();
                                     }
                                     //initialize the person controller
-                                    controller.init((ModelPerson) item);
+                                    controller.init((User) item);
                                     // Display content of the fxml file
                                     setGraphic(listElement);
                                     adaptItemsMyFriends(listView);
@@ -96,7 +96,7 @@ public class MesFriendsView {
 
     private static void listenTo(ListView listView) {
         listView.getSelectionModel().selectedItemProperty().addListener(
-                (ChangeListener<ModelPerson>) (observable, oldValue, newValue) -> {
+                (ChangeListener<User>) (observable, oldValue, newValue) -> {
                     rangeSelectedItemFriend = modelFriend.getListOfMyFriends().indexOf(newValue);
                     // --> GRRR! in javaFX the field Name is kbown in the Controller class (not in the view)
                 });

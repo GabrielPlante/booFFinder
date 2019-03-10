@@ -106,11 +106,11 @@
                               </Text>
                               <VBox prefHeight="85.0" prefWidth="158.0">
                                  <children>
-                                    <CheckBox fx:id="GourmandCheck" mnemonicParsing="false" prefWidth="80.0" text="Gourmand" />
-                                    <CheckBox fx:id="SansGlutenCheck" mnemonicParsing="false" text="Sans Gluten" />
-                                    <CheckBox fx:id="vegetarienCheck" mnemonicParsing="false" text="Végétarien" />
-                                    <CheckBox fx:id="sportifCheck" mnemonicParsing="false" text="Sportif" />
-                                    <CheckBox fx:id="HauteCaloriesCheck" mnemonicParsing="false" text="Haute Calories" />
+                                    <CheckBox fx:id="GourmandCheck" mnemonicParsing="false" prefHeight="18.0" prefWidth="177.0" text="Gourmand" />
+                                    <CheckBox fx:id="SansGlutenCheck" mnemonicParsing="false" prefHeight="18.0" prefWidth="160.0" text="Sans Gluten" />
+                                    <CheckBox fx:id="vegetarienCheck" mnemonicParsing="false" prefHeight="18.0" prefWidth="185.0" text="Végétarien" />
+                                    <CheckBox fx:id="sportifCheck" mnemonicParsing="false" prefHeight="18.0" prefWidth="173.0" text="Sportif" />
+                                    <CheckBox fx:id="HauteCaloriesCheck" mnemonicParsing="false" prefHeight="18.0" prefWidth="168.0" text="Haute Calories" />
                                  </children>
                               </VBox>
                            </children>

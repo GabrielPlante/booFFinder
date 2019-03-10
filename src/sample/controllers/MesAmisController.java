@@ -1,6 +1,7 @@
 package sample.controllers;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
@@ -76,9 +77,7 @@ public class MesAmisController {
         voirFriendButton.setOnAction(event -> openFriendPage());
 
 
-        addFriendButton.setOnAction( event -> {
-            modelListOfMyFriends.add( new User(friendNameField.getText(),"","",new ModelListOfMyRestaurants(), new ModelListOfMyRecommandations(), new ModelListOfMyFriends(), new ModelListOfRegimes()));
-        });
+        addFriendButton.setOnAction( event -> addFriendEvent());
 
         removeFriendButton.setOnAction( event -> {
             modelListOfMyFriends.getListOfMyFriends().remove( MesFriendsView.getRangeSelectedItemFriend() );
@@ -87,6 +86,36 @@ public class MesAmisController {
 
 
     }
+
+    private void addFriendEvent() {
+        User newFriend = null;
+        for (User otherUser : ModelUserDatabase.getUsers()) {
+            if (!user.equals(otherUser)) {
+                if (otherUser.getUsername().equals(friendNameField.getText())) {
+                    newFriend = otherUser;
+                    break;
+                }
+            }
+        }
+        if (newFriend != null) {
+            if (user.getMyFriends().getListOfMyFriends().contains(newFriend)) {
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("Déjà en amis");
+                alert.setHeaderText("Utilisateur déjà en amis !");
+                alert.show();
+            }
+            else {
+                modelListOfMyFriends.add(newFriend);
+            }
+        }
+        else {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Aucun utilisateur avec cet identifiant");
+            alert.setHeaderText("Utilisateur non trouvé");
+            alert.show();
+        }
+    }
+
 
     private void openFriendPage() {
         pg.openMesAmisPage(modelListOfMyFriends.getListOfMyFriends().get(MesFriendsView.getRangeSelectedItemFriend()));

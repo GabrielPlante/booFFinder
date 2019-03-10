@@ -1,8 +1,5 @@
 package sample.models;
 
-import javafx.beans.property.SimpleStringProperty;
-import javafx.beans.property.StringProperty;
-
 import java.util.ArrayList;
 
 public class User {
@@ -65,14 +62,19 @@ public class User {
     public void updateRecommandations() {
 
         myRecommandations.getListOfMyRestaurants().clear();
+
+
         for(ModelRestaurant restaurant : ModelRestaurantDataBase.getRestaurants()) {
 
+            if (restaurant.getName().equals("Restaurant Végétarien")) System.out.println("size : " + restaurant.getRegimes().getRegimes().size());
+            boolean addNext = true;
             if (!myRestaurants.getListOfMyRestaurants().contains(restaurant)) {
                 for (ModelRegime regime : restaurant.getRegimes().getRegimes()) {
-                    if (myRegimes.getRegimes().contains(regime)) {
+                    if (myRegimes.getRegimes().contains(regime) && addNext) {
                         myRecommandations.add(restaurant);
-                        break;
+                        addNext = false;
                     }
+
                 }
             }
         }

@@ -20,7 +20,7 @@ public class Main extends Application {
 
 
         ModelRegimeDataBase modelRegimeDataBase = new ModelRegimeDataBase();
-        ModelRestaurantDataBase modelRestaurantDataBase = new ModelRestaurantDataBase(modelRegimeDataBase);
+        ModelRestaurantDataBase modelRestaurantDataBase = new ModelRestaurantDataBase();
         ModelUserDatabase modelUserDatabase = new ModelUserDatabase(modelRestaurantDataBase,modelRegimeDataBase);
 
         FXMLLoader loader = new FXMLLoader();

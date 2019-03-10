@@ -1,5 +1,6 @@
 .root{
     -fx-font-family: "Courier New";
+
 }
 
 #menuBox {
@@ -10,12 +11,31 @@
     -fx-background-color : #f9fcff;
 }
 #usernameBox {
+
     -fx-background-color : #cbdbef;
+    -fx-text-fill : #7575a3;
+    -fx-prompt-text-fill: #7575a3;
 }
 #passwordBox {
     -fx-background-color : #cbdbef;
+    -fx-text-fill : #7575a3;
+    -fx-prompt-text-fill: #7575a3;
 }
-
+#mailBox {
+    -fx-background-color : #cbdbef;
+        -fx-text-fill : #7575a3;
+        -fx-prompt-text-fill: #7575a3;
+}
+#passwordBox1 {
+    -fx-background-color : #cbdbef;
+        -fx-text-fill : #7575a3;
+        -fx-prompt-text-fill: #7575a3;
+}
+#passwordBox2 {
+    -fx-background-color : #cbdbef;
+        -fx-text-fill : #7575a3;
+        -fx-prompt-text-fill: #7575a3;
+}
 .button
 {
     -fx-background-color : #7e97c2;
@@ -27,3 +47,5 @@
 .button:pressed {
     -fx-background-color :#eefbf3;
 }
+The CSS styles for text input controls such as TextField for JavaFX 8 are defined in the modena.css stylesheet as below. Create a custom CSS stylesheet and modify the colors as you wish. Use the CSS reference guide if you need help understanding the syntax and available attributes and values.
+

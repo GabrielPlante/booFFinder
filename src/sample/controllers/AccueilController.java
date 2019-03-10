@@ -95,7 +95,7 @@ public class AccueilController {
     }
     private void openParametres() {pg.openParametres();}
     private void openRestaurant() {
-        pg.openMesRestosPage(modelListOfMyRecommandations.getListOfMyRestaurants().get(AccueilView.getRangeSelectedItem()));
+        pg.openMesRestosPage(modelListOfMyRecommandations.getListOfMyRestaurants().get(AccueilView.getRangeSelectedItem()),"accueil");
     }
     private void openLoggin() {
         pg.openLoggin();

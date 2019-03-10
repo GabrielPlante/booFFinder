@@ -56,17 +56,7 @@ public class LogginController {
         connectionButton.setOnAction(event -> checkConnection());
         registerButton.setOnAction(event -> openRegister());
         mainLogoImage.setImage(AccueilView.image);
-        /**
-        badCredentials.setText("");
-        this.stage.getScene().setOnKeyPressed(keyEvent -> {
-            if (keyEvent.getCode() == KeyCode.ENTER) {
-                checkConnection();
-                keyEvent.consume();
-            }
-        });
-         */
-        //createAccountButton.setOnAction(event -> openSignUp());
-        //FPWLink.setOnAction(event -> openForgotPass());
+
     }
 
 
@@ -93,7 +83,7 @@ public class LogginController {
     private void showBadCredentialsError() {
         usernameBox.clear();
         passwordBox.clear();
-        mauvaisPassword.setText("Mauvais mot de passe !");
+        mauvaisPassword.setText("Mauvaise combinaison !");
     }
 
 

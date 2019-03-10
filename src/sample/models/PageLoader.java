@@ -123,7 +123,7 @@ public class PageLoader {
 
     }
 
-    public void openMesRestosPage(ModelRestaurant restaurant) {
+    public void openMesRestosPage(ModelRestaurant restaurant,String lastPage) {
         FXMLLoader loader = new FXMLLoader();
         ControllerMyRestoPage controller = new ControllerMyRestoPage(this.stage, this.user);
 
@@ -137,7 +137,7 @@ public class PageLoader {
             root.getStylesheets().add(MesRestosView.CSS_FILE);
             //initialize the controller
 
-            controller.init(restaurant);
+            controller.init(restaurant,lastPage);
 
             //create the view
             this.stage.setScene(new Scene(root, MesRestosView.WIDTH, MesRestosView.HEIGHT));

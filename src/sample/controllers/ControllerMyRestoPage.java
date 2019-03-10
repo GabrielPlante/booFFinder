@@ -53,6 +53,7 @@ public class ControllerMyRestoPage {
     private User user;
     private PageLoader pg;
     private ModelRestaurant modelRestaurant;
+    private String lastPage;
 
     public ControllerMyRestoPage(Stage stage, User user) {
         this.stage = stage;
@@ -61,7 +62,8 @@ public class ControllerMyRestoPage {
 
     }
 
-    public void init(ModelRestaurant restaurant) {
+    public void init(ModelRestaurant restaurant, String lastPage) {
+        this.lastPage = lastPage;
 
         this.modelRestaurant = restaurant;
         main_menu_accueil.setOnAction(event -> openAccueil());
@@ -70,20 +72,44 @@ public class ControllerMyRestoPage {
         main_menu_parametres.setOnAction(event -> openParametres());
         main_menu_deco.setOnAction(event -> openLoggin());
         mainLogoImage.setImage(AccueilView.image);
-        retour.setOnAction(event ->openMesRestos());
+        retour.setOnAction(event ->retourBouton());
 
         restaurantImage.setFill(new ImagePattern(new Image(restaurant.getUrl())));
         nomRestaurant.setText(restaurant.getName());
         note.setText(String.valueOf(restaurant.getNote()));
         initTablePlats();
 
-        ajouterRestaurant.setOnAction(event -> ajouterRest());
+        updateState(restaurant);
 
+    }
+
+    private void retourBouton() {
+        if (lastPage.equals("accueil")) pg.openAccueil();
+        else if (lastPage.equals("mesRestos")) pg.openMesRestos();
+    }
+
+    private void updateState(ModelRestaurant restaurant) {
+        if(user.getMyRestaurants().getListOfMyRestaurants().contains(restaurant)) {
+            ajouterRestaurant.setText("Supprimer");
+            ajouterRestaurant.setOnAction(event -> supprimerRest());
+
+        }
+        else {
+            ajouterRestaurant.setText("Ajouter");
+            ajouterRestaurant.setOnAction(event -> ajouterRest());
+        }
     }
 
     private void ajouterRest() {
         user.getMyRestaurants().add(modelRestaurant);
-        user.getMyRecommandations().remove(modelRestaurant);
+        user.updateRecommandations();
+        pg.openMesRestosPage(modelRestaurant,lastPage);
+    }
+
+    private void supprimerRest() {
+        user.getMyRestaurants().remove(modelRestaurant);
+        user.updateRecommandations();
+        pg.openMesRestosPage(modelRestaurant,lastPage);
     }
 
     private void initTablePlats() {

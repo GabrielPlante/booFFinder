@@ -74,7 +74,7 @@ public class MesRestosController {
 
     private void openMesRestosPage() {
 
-        pg.openMesRestosPage(modelListOfMyRestaurants.getListOfMyRestaurants().get(MesRestosView.getRangeSelectedItem()));
+        pg.openMesRestosPage(modelListOfMyRestaurants.getListOfMyRestaurants().get(MesRestosView.getRangeSelectedItem()),"mesRestos");
     }
     private void openAccueil() {
         pg.openAccueil();

@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import sample.controllers.LogginController;
 import sample.models.ModelRegimeDataBase;
@@ -33,6 +34,8 @@ public class Main extends Application {
             primaryStage.setScene(new Scene(root, LogginView.WIDTH, LogginView.HEIGHT));
             logginController.init();
             primaryStage.setTitle(LogginView.LABEL);
+            primaryStage.setResizable(false);
+            primaryStage.getIcons().add(new Image(Main.class.getResourceAsStream("resources/images/boofinderico.png")));
             primaryStage.show();
 
         } catch (IOException E){

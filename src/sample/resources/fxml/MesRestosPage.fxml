@@ -11,7 +11,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="481.0" prefWidth="730.0" xmlns="http://javafx.com/javafx/8.0.181" xmlns:fx="http://javafx.com/fxml/1">
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="481.0" prefWidth="730.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <VBox fx:id="menuBox" alignment="CENTER" prefHeight="482.0" prefWidth="178.0" spacing="20.0">
          <children>
@@ -51,15 +51,15 @@
                      <children>
                         <HBox fillHeight="false" prefHeight="100.0" prefWidth="200.0" spacing="100.0">
                            <children>
-                              <Text fx:id="nomRestaurant" strokeType="OUTSIDE" strokeWidth="0.0" text="Restaurant" wrappingWidth="251.2064208984375">
+                              <Text fx:id="nomRestaurant" fill="#5c5c8a" strokeType="OUTSIDE" strokeWidth="0.0" text="Restaurant" wrappingWidth="251.2064208984375">
                                  <font>
                                     <Font size="30.0" />
                                  </font>
                               </Text>
-                              <Circle fx:id="restaurantImage" fill="DODGERBLUE" radius="50.0" stroke="BLACK" strokeType="INSIDE" />
+                              <Circle fx:id="restaurantImage" fill="DODGERBLUE" radius="50.0" stroke="#5c5c8a" strokeType="INSIDE" />
                            </children>
                         </HBox>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Menu">
+                        <Text fill="#5c5c8a" strokeType="OUTSIDE" strokeWidth="0.0" text="Menu">
                            <font>
                               <Font size="20.0" />
                            </font>
@@ -71,7 +71,7 @@
                         </VBox>
                         <HBox prefHeight="23.0" prefWidth="456.0">
                            <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Note" wrappingWidth="43.916015625">
+                              <Text fill="#5c5c8a" strokeType="OUTSIDE" strokeWidth="0.0" text="Note" wrappingWidth="43.916015625">
                                  <font>
                                     <Font size="20.0" />
                                  </font>
@@ -79,7 +79,7 @@
                                     <Insets right="30.0" />
                                  </HBox.margin>
                               </Text>
-                              <Text fx:id="note" strokeType="OUTSIDE" strokeWidth="0.0" text="5">
+                              <Text fx:id="note" fill="#5c5c8a" strokeType="OUTSIDE" strokeWidth="0.0" text="5">
                                  <font>
                                     <Font size="20.0" />
                                  </font>

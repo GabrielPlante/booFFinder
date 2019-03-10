@@ -66,7 +66,6 @@ public class User {
 
         for(ModelRestaurant restaurant : ModelRestaurantDataBase.getRestaurants()) {
 
-            if (restaurant.getName().equals("Restaurant Végétarien")) System.out.println("size : " + restaurant.getRegimes().getRegimes().size());
             boolean addNext = true;
             if (!myRestaurants.getListOfMyRestaurants().contains(restaurant)) {
                 for (ModelRegime regime : restaurant.getRegimes().getRegimes()) {

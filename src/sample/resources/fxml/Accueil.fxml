@@ -48,7 +48,7 @@
                <children>
                   <VBox prefHeight="336.0" prefWidth="475.0" spacing="20.0">
                      <children>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Recommandations" wrappingWidth="218.073486328125">
+                        <Text fill="#5c5c8a" strokeType="OUTSIDE" strokeWidth="0.0" text="Recommandations" wrappingWidth="218.073486328125">
                            <font>
                               <Font size="20.0" />
                            </font>

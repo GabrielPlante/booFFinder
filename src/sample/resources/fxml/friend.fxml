@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" maxWidth="180.0" minWidth="50.0" prefHeight="20.0" xmlns="http://javafx.com/javafx/8.0.181" xmlns:fx="http://javafx.com/fxml/1">
+<VBox alignment="CENTER_LEFT" maxWidth="361.0" minWidth="50.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="72.0" prefWidth="361.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <HBox prefHeight="32.0" prefWidth="267.0">
-         <children>
-            <Label fx:id="name" prefHeight="48.0" prefWidth="157.0" wrapText="true">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </Label>
-         </children>
-      </HBox>
+      <Label fx:id="name" contentDisplay="BOTTOM" prefHeight="71.0" prefWidth="362.0" textFill="#5c5c8a" wrapText="true">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <padding>
+            <Insets left="50.0" />
+         </padding>
+      </Label>
    </children>
 </VBox>

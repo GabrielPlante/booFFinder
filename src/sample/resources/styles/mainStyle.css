@@ -8,7 +8,7 @@
     -fx-text-fill : #f2ab63;
 }
 #inside {
-    -fx-background-color : #f9fcff;
+    -fx-background-color :  #e0e0eb;
 }
 #usernameBox {
 
@@ -47,5 +47,28 @@
 .button:pressed {
     -fx-background-color :#eefbf3;
 }
-The CSS styles for text input controls such as TextField for JavaFX 8 are defined in the modena.css stylesheet as below. Create a custom CSS stylesheet and modify the colors as you wish. Use the CSS reference guide if you need help understanding the syntax and available attributes and values.
+
+.list-cell {
+    -fx-skin: "com.sun.javafx.scene.control.skin.ListCellSkin";
+    -fx-background-color: -fx-control-inner-background;
+    -fx-padding: 0.25em; /* 3 */
+    -fx-text-fill: -fx-text-inner-color;
+    -fx-opacity: 1;
+}
+
+
+.list-cell:filled:selected:focused, .list-cell:filled:selected, .list-view:horizontal .list-cell:filled:selected {
+    -fx-background-color:  #e0e0eb;
+    -fx-text-fill: -fx-selection-bar-text;
+}
+
+.list-view .scroll-bar:horizontal {
+    -fx-opacity: 0;
+    -fx-padding:-7;
+}
+
+.table-view .scroll-bar:horizontal {
+    -fx-opacity: 0;
+    -fx-padding:-7;
+}
 

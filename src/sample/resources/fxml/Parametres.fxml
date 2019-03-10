@@ -53,14 +53,14 @@
                <children>
                   <VBox prefHeight="364.0" prefWidth="490.0" spacing="20.0">
                      <children>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Paramètres">
+                        <Text fill="#5c5c8a" strokeType="OUTSIDE" strokeWidth="0.0" text="Paramètres">
                            <font>
                               <Font size="20.0" />
                            </font>
                         </Text>
                         <HBox prefHeight="30.0" prefWidth="652.0">
                            <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Votre identifiant" wrappingWidth="160.0">
+                              <Text fill="#5c5c8a" strokeType="OUTSIDE" strokeWidth="0.0" text="Votre identifiant" wrappingWidth="160.0">
                                  <font>
                                     <Font size="20.0" />
                                  </font>
@@ -79,7 +79,7 @@
                         </HBox>
                         <HBox prefHeight="30.0" prefWidth="652.0">
                            <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Email" wrappingWidth="160.0">
+                              <Text fill="#5c5c8a" strokeType="OUTSIDE" strokeWidth="0.0" text="Email" wrappingWidth="160.0">
                                  <font>
                                     <Font size="20.0" />
                                  </font>
@@ -89,7 +89,7 @@
                         </HBox>
                         <HBox prefHeight="30.0" prefWidth="652.0">
                            <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Mot de passe" wrappingWidth="160.0">
+                              <Text fill="#5c5c8a" strokeType="OUTSIDE" strokeWidth="0.0" text="Mot de passe" wrappingWidth="160.0">
                                  <font>
                                     <Font size="20.0" />
                                  </font>
@@ -99,18 +99,18 @@
                         </HBox>
                         <HBox prefHeight="104.0" prefWidth="652.0">
                            <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Catégories" wrappingWidth="160.0">
+                              <Text fill="#5c5c8a" strokeType="OUTSIDE" strokeWidth="0.0" text="Catégories" wrappingWidth="160.0">
                                  <font>
                                     <Font size="20.0" />
                                  </font>
                               </Text>
                               <VBox prefHeight="85.0" prefWidth="158.0">
                                  <children>
-                                    <CheckBox fx:id="GourmandCheck" mnemonicParsing="false" prefHeight="18.0" prefWidth="177.0" text="Gourmand" />
-                                    <CheckBox fx:id="SansGlutenCheck" mnemonicParsing="false" prefHeight="18.0" prefWidth="160.0" text="Sans Gluten" />
-                                    <CheckBox fx:id="vegetarienCheck" mnemonicParsing="false" prefHeight="18.0" prefWidth="185.0" text="Végétarien" />
-                                    <CheckBox fx:id="sportifCheck" mnemonicParsing="false" prefHeight="18.0" prefWidth="173.0" text="Sportif" />
-                                    <CheckBox fx:id="HauteCaloriesCheck" mnemonicParsing="false" prefHeight="18.0" prefWidth="168.0" text="Haute Calories" />
+                                    <CheckBox fx:id="GourmandCheck" mnemonicParsing="false" prefHeight="18.0" prefWidth="177.0" text="Gourmand" textFill="#5c5c8a" />
+                                    <CheckBox fx:id="SansGlutenCheck" mnemonicParsing="false" prefHeight="18.0" prefWidth="160.0" text="Sans Gluten" textFill="#5c5c8a" />
+                                    <CheckBox fx:id="vegetarienCheck" mnemonicParsing="false" prefHeight="18.0" prefWidth="185.0" text="Végétarien" textFill="#5c5c8a" />
+                                    <CheckBox fx:id="sportifCheck" mnemonicParsing="false" prefHeight="18.0" prefWidth="173.0" text="Sportif" textFill="#5c5c8a" />
+                                    <CheckBox fx:id="HauteCaloriesCheck" mnemonicParsing="false" prefHeight="18.0" prefWidth="168.0" text="Haute Calories" textFill="#5c5c8a" />
                                  </children>
                               </VBox>
                            </children>

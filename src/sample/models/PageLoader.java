@@ -179,5 +179,24 @@ public class PageLoader {
 
     }
 
+    public void openLoggin() {
+        FXMLLoader loader = new FXMLLoader();
+        LogginController logginController = new LogginController(this.stage);
+        loader.setController(logginController);
+
+        try{
+            Parent root = loader.load(getClass().getResourceAsStream("/sample/resources/fxml/Loggin.fxml"));
+            root.getStylesheets().add(LogginView.CSS_FILE);
+            this.stage.setScene(new Scene(root, LogginView.WIDTH, LogginView.HEIGHT));
+            logginController.init();
+            this.stage.setTitle(LogginView.LABEL);
+            this.stage.show();
+
+        } catch (IOException E){
+            E.printStackTrace();
+        }
+
+    }
+
 
 }

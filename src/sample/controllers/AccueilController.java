@@ -2,6 +2,7 @@ package sample.controllers;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.ListView;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
@@ -40,6 +41,9 @@ public class AccueilController {
     @FXML
     private Button ajouterRestaurant;
 
+    @FXML
+    private Button main_menu_deco;
+
 
     private Stage stage;
     private User user;
@@ -65,6 +69,7 @@ public class AccueilController {
         main_menu_mesRestos.setOnAction(event -> openMesRestos());
         main_menu_mesAmis.setOnAction(event -> openMesAmis());
         main_menu_parametres.setOnAction(event -> openParametres());
+        main_menu_deco.setOnAction(event -> openLoggin());
         voirRestaurant.setOnAction(event -> openRestaurant());
         mainLogoImage.setImage(AccueilView.image);
 
@@ -91,6 +96,9 @@ public class AccueilController {
     private void openParametres() {pg.openParametres();}
     private void openRestaurant() {
         pg.openMesRestosPage(modelListOfMyRecommandations.getListOfMyRestaurants().get(AccueilView.getRangeSelectedItem()));
+    }
+    private void openLoggin() {
+        pg.openLoggin();
     }
 
 }

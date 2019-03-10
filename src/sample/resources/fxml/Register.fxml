@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox fx:id="menuBox" alignment="CENTER" fillWidth="false" prefHeight="600.0" prefWidth="400.0" spacing="50.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text fx:id="title" strokeType="OUTSIDE" strokeWidth="0.0" text="BooFFinder" textAlignment="CENTER" wrappingWidth="278.3058319091797">
+         <font>
+            <Font name="Arimo" size="46.0" />
+         </font>
+      </Text>
+      <VBox nodeOrientation="LEFT_TO_RIGHT" prefHeight="483.0" prefWidth="270.0" spacing="30.0">
+         <children>
+            <TextField fx:id="usernameBox" alignment="CENTER" prefHeight="30.0" prefWidth="160.0" promptText="Identifiant">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="usernameBox1" alignment="CENTER" prefHeight="30.0" prefWidth="160.0" promptText="Adresse mail" />
+            <PasswordField fx:id="passwordBox" alignment="CENTER" prefHeight="30.0" prefWidth="160.0" promptText="Mot de passe" />
+            <PasswordField fx:id="passwordBox1" alignment="CENTER" prefHeight="30.0" prefWidth="160.0" promptText="Confirmer mot de passe" />
+            <HBox prefHeight="104.0" prefWidth="652.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Catégories" wrappingWidth="120.00006103515625">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Text>
+                  <VBox prefHeight="85.0" prefWidth="158.0">
+                     <children>
+                        <CheckBox fx:id="GourmandCheck" mnemonicParsing="false" prefHeight="19.0" prefWidth="163.0" text="Gourmand" />
+                        <CheckBox fx:id="SansGlutenCheck" mnemonicParsing="false" prefHeight="18.0" prefWidth="161.0" text="Sans Gluten" />
+                        <CheckBox fx:id="vegetarienCheck" mnemonicParsing="false" prefHeight="20.0" prefWidth="164.0" text="Végétarien" />
+                        <CheckBox fx:id="sportifCheck" mnemonicParsing="false" prefHeight="20.0" prefWidth="162.0" text="Sportif" />
+                        <CheckBox fx:id="HauteCaloriesCheck" mnemonicParsing="false" prefHeight="21.0" prefWidth="159.0" text="Haute Calories" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <Text fx:id="mauvaisPassword" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="269.18309593200684">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <Button fx:id="connectionButton" mnemonicParsing="false" prefHeight="32.0" prefWidth="344.0" text="S'enregistrer" textAlignment="CENTER" />
+         </children>
+      </VBox>
+   </children>
+</VBox>

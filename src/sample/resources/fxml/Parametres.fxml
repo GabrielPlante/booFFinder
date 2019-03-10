@@ -35,6 +35,11 @@
                <font>
                   <Font size="16.0" />
                </font></Button>
+            <Button fx:id="main_menu_deco" mnemonicParsing="false" prefWidth="160.0" text="Déconnection">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
          </children>
          <opaqueInsets>
             <Insets />

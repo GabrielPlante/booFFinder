@@ -53,6 +53,8 @@ public class ParametresController {
     private CheckBox sportifCheck;
     @FXML
     private CheckBox HauteCaloriesCheck;
+    @FXML
+    private Button main_menu_deco;
 
 
 
@@ -73,6 +75,7 @@ public class ParametresController {
         main_menu_mesRestos.setOnAction(event -> openMesRestos());
         main_menu_mesAmis.setOnAction(event -> openMesAmis());
         main_menu_parametres.setOnAction(event -> openParametres());
+        main_menu_deco.setOnAction(event -> openLoggin());
         modifierInfos.setOnAction(event -> modifier());
         mainLogoImage.setImage(AccueilView.image);
         initInfos();
@@ -176,5 +179,8 @@ public class ParametresController {
         pg.openMesAmis();
     }
     private void openParametres() {pg.openParametres();}
+    private void openLoggin() {
+        pg.openLoggin();
+    }
 
 }

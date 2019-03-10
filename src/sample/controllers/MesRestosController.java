@@ -37,6 +37,8 @@ public class MesRestosController {
     private Button allerSurLaPage;
     @FXML
     private ImageView mainLogoImage;
+    @FXML
+    private Button main_menu_deco;
 
     private Stage stage;
     private User user;
@@ -58,6 +60,7 @@ public class MesRestosController {
         main_menu_mesRestos.setOnAction(event -> openMesRestos());
         main_menu_mesAmis.setOnAction(event -> openMesAmis());
         main_menu_parametres.setOnAction(event -> openParametres());
+        main_menu_deco.setOnAction(event -> openLoggin());
         mainLogoImage.setImage(AccueilView.image);
 
         allerSurLaPage.setOnAction(event -> openMesRestosPage());
@@ -83,6 +86,9 @@ public class MesRestosController {
         pg.openMesAmis();
     }
     private void openParametres() {pg.openParametres();}
+    private void openLoggin() {
+        pg.openLoggin();
+    }
 
 
 }

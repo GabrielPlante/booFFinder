@@ -46,6 +46,8 @@ public class ControllerMyRestoPage {
     private Circle restaurantImage;
     @FXML
     private Button ajouterRestaurant;
+    @FXML
+    private Button main_menu_deco;
 
     private Stage stage;
     private User user;
@@ -66,6 +68,7 @@ public class ControllerMyRestoPage {
         main_menu_mesRestos.setOnAction(event -> openMesRestos());
         main_menu_mesAmis.setOnAction(event -> openMesAmis());
         main_menu_parametres.setOnAction(event -> openParametres());
+        main_menu_deco.setOnAction(event -> openLoggin());
         mainLogoImage.setImage(AccueilView.image);
         retour.setOnAction(event ->openMesRestos());
 
@@ -116,5 +119,8 @@ public class ControllerMyRestoPage {
         pg.openMesAmis();
     }
     private void openParametres() {pg.openParametres();}
+    private void openLoggin() {
+        pg.openLoggin();
+    }
 
 }

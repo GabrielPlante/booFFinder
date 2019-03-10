@@ -47,6 +47,8 @@ public class MesAmisController {
 
     @FXML
     private Button voirFriendButton;
+    @FXML
+    private Button main_menu_deco;
 
 
     private Stage stage;
@@ -68,6 +70,7 @@ public class MesAmisController {
         main_menu_mesRestos.setOnAction(event -> openMesRestos());
         main_menu_mesAmis.setOnAction(event -> openMesAmis());
         main_menu_parametres.setOnAction(event -> openParametres());
+        main_menu_deco.setOnAction(event -> openLoggin());
         mainLogoImage.setImage(AccueilView.image);
 
         voirFriendButton.setOnAction(event -> openFriendPage());
@@ -103,6 +106,9 @@ public class MesAmisController {
         pg.openMesAmis();
     }
     private void openParametres() {pg.openParametres();}
+    private void openLoggin() {
+        pg.openLoggin();
+    }
 
 
 

@@ -165,6 +165,7 @@ public class ParametresController {
         String mdp = user.getPassword();
         if (!motDePasseInfo.getText().equals("")) mdp = motDePasseInfo.getText();
         user.updateInfos(identifiantInfo.getText(),emailInfo.getText(),mdp,regimes);
+        user.updateRecommandations();
     }
 
 

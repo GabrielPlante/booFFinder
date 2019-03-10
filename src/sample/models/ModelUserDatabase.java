@@ -79,11 +79,11 @@ public class ModelUserDatabase {
         user5.getMyFriends().add(user1);
         user5.getMyFriends().add(user4);
 
-        user1.updateRecommandations(restaurantDataBase);
-        user2.updateRecommandations(restaurantDataBase);
-        user3.updateRecommandations(restaurantDataBase);
-        user4.updateRecommandations(restaurantDataBase);
-        user5.updateRecommandations(restaurantDataBase);
+        user1.updateRecommandations();
+        user2.updateRecommandations();
+        user3.updateRecommandations();
+        user4.updateRecommandations();
+        user5.updateRecommandations();
 
         users.add(user1);
         users.add(user2);

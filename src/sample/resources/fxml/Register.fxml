@@ -19,14 +19,14 @@
       </Text>
       <VBox nodeOrientation="LEFT_TO_RIGHT" prefHeight="483.0" prefWidth="270.0" spacing="30.0">
          <children>
-            <TextField fx:id="usernameBox" alignment="CENTER" prefHeight="30.0" prefWidth="160.0" promptText="Identifiant">
+            <TextField fx:id="usernameBox" alignment="CENTER" prefHeight="34.0" prefWidth="270.0" promptText="Identifiant">
                <VBox.margin>
                   <Insets />
                </VBox.margin>
             </TextField>
-            <TextField fx:id="usernameBox1" alignment="CENTER" prefHeight="30.0" prefWidth="160.0" promptText="Adresse mail" />
-            <PasswordField fx:id="passwordBox" alignment="CENTER" prefHeight="30.0" prefWidth="160.0" promptText="Mot de passe" />
-            <PasswordField fx:id="passwordBox1" alignment="CENTER" prefHeight="30.0" prefWidth="160.0" promptText="Confirmer mot de passe" />
+            <TextField fx:id="mailBox" alignment="CENTER" prefHeight="30.0" prefWidth="160.0" promptText="Adresse mail" />
+            <PasswordField fx:id="passwordBox1" alignment="CENTER" prefHeight="30.0" prefWidth="160.0" promptText="Mot de passe" />
+            <PasswordField fx:id="passwordBox2" alignment="CENTER" prefHeight="30.0" prefWidth="160.0" promptText="Confirmer mot de passe" />
             <HBox prefHeight="104.0" prefWidth="652.0">
                <children>
                   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Catégories" wrappingWidth="120.00006103515625">
@@ -45,12 +45,17 @@
                   </VBox>
                </children>
             </HBox>
-            <Text fx:id="mauvaisPassword" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="269.18309593200684">
+            <Text fx:id="mauvaisInfo" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="269.18309593200684">
                <font>
                   <Font size="16.0" />
                </font>
             </Text>
-            <Button fx:id="connectionButton" mnemonicParsing="false" prefHeight="32.0" prefWidth="344.0" text="S'enregistrer" textAlignment="CENTER" />
+            <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+               <children>
+                  <Button fx:id="registerButton" mnemonicParsing="false" prefHeight="32.0" prefWidth="344.0" text="S'enregistrer" textAlignment="CENTER" />
+                  <Button fx:id="cancelButton" mnemonicParsing="false" prefHeight="32.0" prefWidth="270.0" text="Annuler" textAlignment="CENTER" />
+               </children>
+            </VBox>
          </children>
       </VBox>
    </children>

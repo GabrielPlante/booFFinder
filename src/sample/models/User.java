@@ -62,10 +62,10 @@ public class User {
         return myFriends;
     }
 
-    public void updateRecommandations(ModelRestaurantDataBase modelRestaurantDataBase) {
+    public void updateRecommandations() {
 
         myRecommandations.getListOfMyRestaurants().clear();
-        for(ModelRestaurant restaurant : modelRestaurantDataBase.getRestaurants()) {
+        for(ModelRestaurant restaurant : ModelRestaurantDataBase.getRestaurants()) {
 
             if (!myRestaurants.getListOfMyRestaurants().contains(restaurant)) {
                 for (ModelRegime regime : restaurant.getRegimes().getRegimes()) {

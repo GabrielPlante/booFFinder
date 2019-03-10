@@ -12,9 +12,11 @@ import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import sample.models.ModelListOfMyRecommandations;
+import sample.models.ModelRestaurantDataBase;
 import sample.models.ModelUserDatabase;
 import sample.models.User;
 import sample.views.AccueilView;
+import sample.views.RegisterView;
 
 
 import java.io.IOException;
@@ -39,7 +41,8 @@ public class LogginController {
     private Text mauvaisPassword;
 
     @FXML
-    private Button createAccountButton;
+    private Button registerButton;
+
 
 
 
@@ -51,6 +54,7 @@ public class LogginController {
 
     public void init() {
         connectionButton.setOnAction(event -> checkConnection());
+        registerButton.setOnAction(event -> openRegister());
         mainLogoImage.setImage(AccueilView.image);
         /**
         badCredentials.setText("");
@@ -94,6 +98,8 @@ public class LogginController {
 
 
     private void openAccueil(User user) {
+
+        user.updateRecommandations();
         FXMLLoader loader = new FXMLLoader();
 
         //create a controller
@@ -120,28 +126,23 @@ public class LogginController {
         }
     }
 
-    /**
-
-    private void openSignUp() {
+    private void openRegister() {
         FXMLLoader loader = new FXMLLoader();
 
         //create a controller
-        InscriptionController controller = new InscriptionController(this.stage);
+        RegisterController controller = new RegisterController();
 
         //attach controller
         loader.setController(controller);
 
-        //attach XML file
         try {
-            Parent root = loader.load(getClass().getResourceAsStream(InscriptionView.XML_FILE));
-            root.getStylesheets().add(InscriptionView.CSS_FILE);
+            Parent root = loader.load(getClass().getResourceAsStream("/sample/resources/fxml/Register.fxml"));
+            root.getStylesheets().add(AccueilView.CSS_FILE);
             //initialize the controller
-
+            controller.init(stage);
             //create the view
-
-            this.stage.setScene(new Scene(root, InscriptionView.WIDTH, InscriptionView.HEIGHT));
-            controller.init();
-            this.stage.setTitle(InscriptionView.LABEL);
+            this.stage.setScene(new Scene(root, RegisterView.WIDTH, RegisterView.HEIGHT));
+            this.stage.setTitle(AccueilView.LABEL);
 
             //show the view
             this.stage.show();
@@ -149,30 +150,4 @@ public class LogginController {
             E.printStackTrace();
         }
     }
-
-    private void openForgotPass() {
-        FXMLLoader loader = new FXMLLoader();
-
-        //create a controller
-        ForgetPasswordController forgetPasswordController = new ForgetPasswordController(this.stage);
-
-        //attach controller
-        loader.setController(motDePasseOublierController);
-
-        //attach XML file
-        try {
-            Parent root = loader.load(getClass().getResourceAsStream(MDPOublierView.XML_FILE));
-            root.getStylesheets().add(MDPOublierView.CSS_FILE);
-
-            this.stage.setScene(new Scene(root, MDPOublierView.WIDTH, MDPOublierView.HEIGHT));
-            motDePasseOublierController.init();
-            this.stage.setTitle(MDPOublierView.LABEL);
-
-            //show the view
-            this.stage.show();
-        } catch (IOException E) {
-            E.printStackTrace();
-        }
-    }
-     **/
 }

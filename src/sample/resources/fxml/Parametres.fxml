@@ -35,7 +35,7 @@
                <font>
                   <Font size="16.0" />
                </font></Button>
-            <Button fx:id="main_menu_deco" mnemonicParsing="false" prefWidth="160.0" text="Déconnection">
+            <Button fx:id="main_menu_deco" mnemonicParsing="false" prefWidth="160.0" text="Déconnexion">
                <font>
                   <Font size="16.0" />
                </font>

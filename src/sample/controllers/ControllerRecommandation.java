@@ -23,10 +23,13 @@ public class ControllerRecommandation {
     private Text nameRestaurant;
     @FXML
     private Text descriptionRestaurant;
+    @FXML
+    private Text adresse;
 
     public void init(ModelRestaurant restaurant) {
         nameRestaurant.setText(restaurant.getName());
         descriptionRestaurant.setText(restaurant.getDescription());
+        adresse.setText(restaurant.getAdresse());
         fond.setBackground(Background.EMPTY);
         cercle.setFill(new ImagePattern(new Image(restaurant.getUrl())));
     }

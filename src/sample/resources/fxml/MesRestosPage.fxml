@@ -51,11 +51,20 @@
                      <children>
                         <HBox fillHeight="false" prefHeight="100.0" prefWidth="200.0" spacing="100.0">
                            <children>
-                              <Text fx:id="nomRestaurant" fill="#5c5c8a" strokeType="OUTSIDE" strokeWidth="0.0" text="Restaurant" wrappingWidth="251.2064208984375">
-                                 <font>
-                                    <Font size="30.0" />
-                                 </font>
-                              </Text>
+                              <VBox prefHeight="100.0" prefWidth="437.0" spacing="20.0">
+                                 <children>
+                                    <Text fx:id="nomRestaurant" fill="#5c5c8a" strokeType="OUTSIDE" strokeWidth="0.0" text="Restaurant" wrappingWidth="251.2064208984375">
+                                       <font>
+                                          <Font size="30.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="adresse" fill="#5c5c8a" strokeType="OUTSIDE" strokeWidth="0.0" text="Adresse" wrappingWidth="251.2064208984375">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </VBox>
                               <Circle fx:id="restaurantImage" fill="DODGERBLUE" radius="50.0" stroke="#5c5c8a" strokeType="INSIDE" />
                            </children>
                         </HBox>

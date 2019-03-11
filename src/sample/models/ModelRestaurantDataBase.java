@@ -69,13 +69,13 @@ public class ModelRestaurantDataBase {
         ModelListOfRegimes modelListOfRegimes7 = new ModelListOfRegimes();
         modelListOfRegimes7.add(ModelRegimeDataBase.getRegimes().get(1));
 
-        restaurants.add(new ModelRestaurant("Quick",4,plats1,"quick.jpg","Le poulet c'est bon",modelListOfRegimes1));
-        restaurants.add(new ModelRestaurant("Bar",3,plats2,"","",modelListOfRegimes2));
-        restaurants.add(new ModelRestaurant("KFC",2,plats3,"KFC.png","It's finger lickin' good",modelListOfRegimes3));
-        restaurants.add(new ModelRestaurant("Restaurant chinois",5,plats4,"chinois.jpg","",modelListOfRegimes4));
-        restaurants.add(new ModelRestaurant("Mac'Do",1,plats5,"macdo.png","Venez comme vous êtes",modelListOfRegimes5));
-        restaurants.add(new ModelRestaurant("Restaurant Végétarien",4,plats6,"salade.jpg","Au menu : De l'herbe",modelListOfRegimes6));
-        restaurants.add(new ModelRestaurant("Restaurant sans gluten",4,plats7,"sansGluten.jpg","Le gluten, c'est notre combat",modelListOfRegimes7));
+        restaurants.add(new ModelRestaurant("Quick",4,plats1,"quick.jpg","Le poulet c'est bon",modelListOfRegimes1, "2 avenue Versaille"));
+        restaurants.add(new ModelRestaurant("Bar",3,plats2,"","",modelListOfRegimes2,"4 rue des Lilas"));
+        restaurants.add(new ModelRestaurant("KFC",2,plats3,"KFC.png","It's finger lickin' good",modelListOfRegimes3,"7 avenue des platanes"));
+        restaurants.add(new ModelRestaurant("Restaurant chinois",5,plats4,"chinois.jpg","",modelListOfRegimes4,"6 avenue d'Orléan"));
+        restaurants.add(new ModelRestaurant("Mac'Do",1,plats5,"macdo.png","Venez comme vous êtes",modelListOfRegimes5,"3 avenue de Versaille"));
+        restaurants.add(new ModelRestaurant("Restaurant Végétarien",4,plats6,"salade.jpg","Au menu : De l'herbe",modelListOfRegimes6,"2 avenue pythagore"));
+        restaurants.add(new ModelRestaurant("Restaurant sans gluten",4,plats7,"sansGluten.jpg","Le gluten, c'est notre combat",modelListOfRegimes7,"6 route des dollines"));
 
     }
 

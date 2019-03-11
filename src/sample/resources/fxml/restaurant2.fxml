@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
@@ -9,18 +10,32 @@
 
 <AnchorPane fx:id="fond" prefHeight="100.0" prefWidth="388.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <HBox prefHeight="94.0" prefWidth="466.0" spacing="20.0">
+      <HBox nodeOrientation="LEFT_TO_RIGHT" prefHeight="94.0" prefWidth="466.0" spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Circle fx:id="cercle" fill="DODGERBLUE" radius="50.0" stroke="#5c5c8a" strokeType="INSIDE" />
-            <VBox prefHeight="100.0" prefWidth="364.0" spacing="20.0">
+            <AnchorPane prefHeight="122.0" prefWidth="168.0">
+               <children>
+                  <Circle fx:id="cercle" fill="DODGERBLUE" layoutX="63.0" layoutY="52.0" radius="47.0" stroke="#5c5c8a" strokeType="INSIDE" />
+               </children>
+            </AnchorPane>
+            <VBox prefHeight="100.0" prefWidth="364.0">
                <children>
                   <Text fx:id="nameRestaurant" fill="#666699" strokeType="OUTSIDE" strokeWidth="0.0" text="Restaurant">
                      <font>
                         <Font size="20.0" />
                      </font>
+                     <VBox.margin>
+                        <Insets bottom="15.0" />
+                     </VBox.margin>
                   </Text>
-                  <Text fx:id="descriptionRestaurant" fill="#666699" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+                  <Text fx:id="descriptionRestaurant" fill="#666699" strokeType="OUTSIDE" strokeWidth="0.0" text="Description">
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin></Text>
+                  <Text fx:id="adresse" fill="#666699" strokeType="OUTSIDE" strokeWidth="0.0" text="Adresse" />
                </children>
+               <padding>
+                  <Insets bottom="10.0" top="10.0" />
+               </padding>
             </VBox>
          </children>
       </HBox>

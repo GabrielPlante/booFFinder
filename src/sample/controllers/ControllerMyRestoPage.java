@@ -48,6 +48,8 @@ public class ControllerMyRestoPage {
     private Button ajouterRestaurant;
     @FXML
     private Button main_menu_deco;
+    @FXML
+    private Text adresse;
 
     private Stage stage;
     private User user;
@@ -71,6 +73,7 @@ public class ControllerMyRestoPage {
         main_menu_mesAmis.setOnAction(event -> openMesAmis());
         main_menu_parametres.setOnAction(event -> openParametres());
         main_menu_deco.setOnAction(event -> openLoggin());
+        adresse.setText(restaurant.getAdresse());
         mainLogoImage.setImage(AccueilView.image);
         retour.setOnAction(event ->retourBouton());
 
